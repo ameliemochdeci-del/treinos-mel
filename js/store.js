@@ -154,7 +154,11 @@ export function seriesFeitas(s) {
 }
 
 export function minutosEstimados(ficha) {
-  const seg = ficha.itens.reduce((t, it) => t + it.series * (40 + (it.descanso || 60)), 0);
+  const seg = ficha.itens.reduce((t, it) => {
+    const ex = estado.exercicios[it.ex];
+    if (ex && /^cardio$/i.test(ex.grupo || '')) return t + parseReps(it.reps) * 60 * it.series;
+    return t + it.series * (40 + (it.descanso || 60));
+  }, 0);
   return Math.max(5, Math.round(seg / 60 / 5) * 5);
 }
 
@@ -202,7 +206,7 @@ export function importarTexto(texto) {
   const erros = validarPlano(obj);
   if (erros.length) return { ok: false, erros };
 
-  let novosEx = 0, exAtualizados = 0, novasFichas = 0, atualizadas = 0, agendaMudou = false;
+  let novosEx = 0, exAtualizados = 0, novasFichas = 0, atualizadas = 0, removidas = 0, agendaMudou = false;
   update((s) => {
     (obj.exercicios || []).forEach((e) => {
       const antigo = s.exercicios[e.id];
@@ -215,7 +219,10 @@ export function importarTexto(texto) {
         cuidado: e.cuidado !== undefined ? e.cuidado : (antigo && antigo.cuidado) || '',
         monitorar: e.monitorar !== undefined ? String(e.monitorar) : (antigo && antigo.monitorar) || '',
         // o link de vídeo que você salvou no app não é apagado por uma importação sem vídeo
-        video: e.video || (antigo && antigo.video) || ''
+        // "manterVideos": true no plano = o vídeo que você já tem salvo vence o do plano
+        video: (obj.manterVideos ? ((antigo && antigo.video) || e.video) : (e.video || (antigo && antigo.video))) || '',
+        // nome da imagem de referência que vem junto com o app (pasta img/ref)
+        ref: (typeof e.ref === 'string' && /^[a-z0-9-]+$/.test(e.ref) ? e.ref : '') || (antigo && antigo.ref) || ''
       };
     });
     (obj.fichas || []).forEach((f) => {
@@ -234,28 +241,69 @@ export function importarTexto(texto) {
       const pos = s.fichas.findIndex((x) => x.id === f.id);
       if (pos >= 0) { s.fichas[pos] = ficha; atualizadas++; } else { s.fichas.push(ficha); novasFichas++; }
     });
+    // "removerFichas": ["id", ...] tira fichas antigas (o histórico de treinos continua salvo)
+    if (Array.isArray(obj.removerFichas)) {
+      obj.removerFichas.forEach((id) => {
+        const pos = s.fichas.findIndex((x) => x.id === id);
+        if (pos >= 0) { s.fichas.splice(pos, 1); removidas++; }
+        Object.keys(s.agenda).forEach((dia) => { if (s.agenda[dia] === id) { delete s.agenda[dia]; agendaMudou = true; } });
+        if (s.rascunho && s.rascunho.fichaId === id) s.rascunho = null;
+      });
+    }
     if (obj.agenda) Object.entries(obj.agenda).forEach(([dia, id]) => { agendaMudou = true; if (id) s.agenda[dia] = id; else delete s.agenda[dia]; });
     if (obj.config && typeof obj.config === 'object') {
       if (typeof obj.config.nome === 'string') s.config.nome = obj.config.nome;
       if (Number(obj.config.meta) >= 0) s.config.meta = Number(obj.config.meta);
     }
   });
-  return { ok: true, novosEx, exAtualizados, novasFichas, atualizadas, agendaMudou };
+  return { ok: true, novosEx, exAtualizados, novasFichas, atualizadas, removidas, agendaMudou };
+}
+
+/* ---------- fotos dos aparelhos (cada uma numa chave própria, para não pesar o resto) ---------- */
+const FOTO = 'treinos:foto:';
+export function fotoDe(exId) {
+  try { return localStorage.getItem(FOTO + exId) || ''; } catch (e) { return ''; }
+}
+export function salvarFoto(exId, dataUrl) {
+  try { localStorage.setItem(FOTO + exId, dataUrl); return true; } catch (e) { return false; }
+}
+export function removerFoto(exId) {
+  try { localStorage.removeItem(FOTO + exId); } catch (e) { /* ok */ }
+}
+function todasFotos() {
+  const o = {};
+  try {
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (k && k.startsWith(FOTO)) o[k.slice(FOTO.length)] = localStorage.getItem(k);
+    }
+  } catch (e) { /* ok */ }
+  return o;
+}
+function apagarFotos() {
+  Object.keys(todasFotos()).forEach(removerFoto);
 }
 
 export function exportarTexto() {
-  return JSON.stringify(estado, null, 2);
+  const fotos = todasFotos();
+  return JSON.stringify(Object.keys(fotos).length ? { ...estado, fotos } : estado, null, 2);
 }
 
 export function restaurarBackup(obj) {
-  estado = { ...vazio(), ...obj, config: { ...vazio().config, ...(obj.config || {}) } };
+  const { fotos, ...resto } = obj;
+  estado = { ...vazio(), ...resto, config: { ...vazio().config, ...(resto.config || {}) } };
   salvar();
+  if (fotos && typeof fotos === 'object') {
+    apagarFotos();
+    Object.entries(fotos).forEach(([id, url]) => { if (typeof url === 'string' && url.startsWith('data:image/')) salvarFoto(id, url); });
+  }
   ouvintes.forEach((f) => f());
 }
 
 export function apagarTudo() {
   estado = vazio();
   salvar();
+  apagarFotos();
   ouvintes.forEach((f) => f());
 }
 

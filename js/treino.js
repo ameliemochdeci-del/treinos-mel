@@ -5,10 +5,11 @@ import {
 } from './store.js';
 import {
   esc, icone, fmtPeso, fmtTempo, fmtDuracao, fmtVolume, fmtDataCurta,
-  abrirFolha, confirmar, toast
+  abrirFolha, confirmar, toast, ehCardio
 } from './ui.js';
 import { lerVideo, miniatura, abrirVideo } from './video.js';
 import { iniciarDescanso, pararDescanso, liberarSom } from './rest.js';
+import { imagemDe, blocoImagem, abrirImagem, escolherFoto } from './imagem.js';
 
 /* ---------- começar, continuar, descartar ---------- */
 function montarRascunho(ficha) {
@@ -49,6 +50,20 @@ export function descartarRascunho() {
 }
 
 /* ---------- tela do treino ---------- */
+function htmlSerieCardio(s, i) {
+  return `
+    <li class="serie serie-cardio ${s.ok ? 'ok' : ''}" data-i="${i}">
+      <span class="serie-n">${i + 1}</span>
+      <div class="campo">
+        <button class="passo" data-step data-campo="reps" data-d="-5" aria-label="Menos 5 minutos">${icone.menos}</button>
+        <input type="text" inputmode="numeric" autocomplete="off" data-campo="reps" value="${s.reps}" aria-label="Minutos feitos">
+        <span class="campo-un">min</span>
+        <button class="passo" data-step data-campo="reps" data-d="5" aria-label="Mais 5 minutos">${icone.mais1}</button>
+      </div>
+      <button class="serie-ok" data-ok aria-pressed="${s.ok}" aria-label="Cardio feito">${icone.check}</button>
+    </li>`;
+}
+
 function htmlSerie(s, i) {
   return `
     <li class="serie ${s.ok ? 'ok' : ''}" data-i="${i}">
@@ -128,26 +143,33 @@ export function viewTreino(app) {
       ? `Última vez em ${fmtDataCurta(ult.quando)}: ${ult.sets.length} ${ult.sets.length === 1 ? 'série' : 'séries'} com até ${fmtPeso(Math.max(...ult.sets.map((x) => x.peso)))} kg`
       : 'Primeira vez neste exercício. Anote a carga que usar.';
     const joelho = r.joelho[item.ex];
+    const cardio = ehCardio(ex);
+    const temVideo = !!(v && v.tipo !== 'invalido');
+    const tinhaImagem = !!imagemDe(ex);
     corpo.innerHTML = `
       <div class="ex-cab">
         ${ex.grupo ? `<span class="chip">${esc(ex.grupo)}</span>` : ''}
         <h1 class="ex-nome">${esc(ex.nome)}</h1>
-        <p class="ex-meta">${item.series} séries de ${esc(item.reps)}, descanso de ${item.descanso} s</p>
+        <p class="ex-meta">${cardio ? esc(item.reps) : `${item.series} séries de ${esc(item.reps)}, descanso de ${item.descanso} s`}</p>
         ${item.obs ? `<p class="ex-obs">${esc(item.obs)}</p>` : ''}
       </div>
 
-      <button class="ex-video ${v && v.tipo !== 'invalido' ? '' : 'sem'}" data-video aria-label="${v ? 'Ver vídeo de execução' : 'Adicionar vídeo de execução'}">
-        ${v && v.tipo !== 'invalido' ? `${miniatura(ex, 'g')}<span class="ex-video-txt"><strong>Ver como fazer</strong><span>Vídeo de execução</span></span>`
+      ${tinhaImagem ? blocoImagem(ex, { video: temVideo }) : `
+      <button class="ex-video ${temVideo ? '' : 'sem'}" data-video aria-label="${temVideo ? 'Ver vídeo de execução' : 'Adicionar vídeo de execução'}">
+        ${temVideo ? `${miniatura(ex, 'g')}<span class="ex-video-txt"><strong>Ver como fazer</strong><span>Vídeo de execução</span></span>`
           : `<span class="ex-video-txt"><strong>Sem vídeo ainda</strong><span>Toque para adicionar um link</span></span>`}
       </button>
+      <button class="link ex-add-foto" data-foto>${icone.camera}<span>Adicionar foto do aparelho</span></button>`}
 
       <p class="ex-ultima">${ultTxt}</p>
 
-      <div class="series-cab" aria-hidden="true"><span></span><span>Carga em kg</span><span>Repetições</span><span></span></div>
-      <ol class="series">${sets.map(htmlSerie).join('')}</ol>
+      ${cardio
+        ? `<div class="series-cab series-cab-cardio" aria-hidden="true"><span></span><span>Tempo feito</span><span></span></div>`
+        : `<div class="series-cab" aria-hidden="true"><span></span><span>Carga em kg</span><span>Repetições</span><span></span></div>`}
+      <ol class="series">${sets.map(cardio ? htmlSerieCardio : htmlSerie).join('')}</ol>
       <div class="series-acoes">
-        <button class="link" data-add-serie>${icone.mais1}<span>Adicionar série</span></button>
-        ${sets.length > 1 ? `<button class="link link-quieto" data-rem-serie>Remover última</button>` : ''}
+        ${cardio ? '' : `<button class="link" data-add-serie>${icone.mais1}<span>Adicionar série</span></button>
+        ${sets.length > 1 ? `<button class="link link-quieto" data-rem-serie>Remover última</button>` : ''}`}
       </div>
 
       ${ex.monitorar ? `
@@ -227,13 +249,15 @@ export function viewTreino(app) {
       if (novo) {
         liberarSom();
         const ehFim = rasc().idx === itens.length - 1 && i === rasc().sets[item.ex].length - 1;
-        if (!ehFim) iniciarDescanso(item.descanso || 60);
+        if (!ehFim && !ehCardio(exDe(item))) iniciarDescanso(item.descanso || 60);
       } else {
         pararDescanso();
       }
       desenharProgresso();
       return;
     }
+    if (alvo.closest('[data-ver-img]')) { abrirImagem(exDe(itemAtual())); return; }
+    if (alvo.closest('[data-foto]')) { escolherFoto(exDe(itemAtual()), desenharExercicio); return; }
     if (alvo.closest('[data-video]')) {
       const item = itemAtual();
       const ex = exDe(item);

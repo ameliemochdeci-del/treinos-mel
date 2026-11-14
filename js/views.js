@@ -6,10 +6,11 @@ import {
 } from './store.js';
 import {
   esc, icone, fmtPeso, fmtDuracao, fmtVolume, fmtDataLonga, fmtDataCurta, fmtMes, fmtDataSemana,
-  saudacao, toast, confirmar, recarregar
+  saudacao, toast, confirmar, recarregar, fmtSerie, ehCardio
 } from './ui.js';
 import { lerVideo, miniatura, abrirVideo } from './video.js';
 import { comecarTreino, descartarRascunho } from './treino.js';
+import { imagemDe, miniaturaImagem, blocoImagem, abrirImagem, escolherFoto, tirarFoto } from './imagem.js';
 import { EXEMPLO } from './exemplo.js';
 
 const maiuscula = (t) => t.charAt(0).toUpperCase() + t.slice(1);
@@ -236,10 +237,10 @@ export function viewFicha(app, { id }) {
             return `
             <li>
               <a class="exlinha" href="#/ex/${encodeURIComponent(it.ex)}">
-                ${miniatura(ex, 'm')}
+                ${miniaturaImagem(ex, 'm', miniatura(ex, 'm'))}
                 <span class="exlinha-txt">
                   <span class="linha-titulo">${esc(ex.nome)}</span>
-                  <span class="linha-sub">${it.series} séries de ${esc(it.reps)}, descanso de ${it.descanso} s</span>
+                  <span class="linha-sub">${ehCardio(ex) ? esc(it.reps) : `${it.series} séries de ${esc(it.reps)}, descanso de ${it.descanso} s`}</span>
                 </span>
                 <span class="linha-seta">${icone.dir}</span>
               </a>
@@ -308,6 +309,9 @@ export function viewExercicio(app, { id }) {
       ${ex.grupo ? `<span class="chip">${esc(ex.grupo)}</span>` : ''}
       <h1 class="titulo">${esc(ex.nome)}</h1>
 
+      ${blocoImagem(ex, { vazio: true })}
+      ${imagemDe(ex) && imagemDe(ex).tipo === 'foto' ? `<button class="link link-quieto" data-tirar-foto>Remover minha foto${ex.ref ? ' e voltar para a imagem de referência' : ''}</button>` : ''}
+
       ${v && v.tipo !== 'invalido' ? `
       <button class="ex-video" data-video>${miniatura(ex, 'g')}<span class="ex-video-txt"><strong>Ver como fazer</strong><span>${v.tipo === 'youtube' ? 'Toca aqui dentro do app' : `Abre no ${esc(v.nome)}`}</span></span></button>` : ''}
 
@@ -329,15 +333,15 @@ export function viewExercicio(app, { id }) {
       </section>` : ''}
 
       <section class="secao">
-        <h2 class="secao-titulo">Evolução da carga</h2>
-        ${graficoCarga(hist)}
+        <h2 class="secao-titulo">${ehCardio(ex) ? 'Últimas vezes' : 'Evolução da carga'}</h2>
+        ${ehCardio(ex) ? '' : graficoCarga(hist)}
         ${hist.length ? `
         <ul class="hist-lista">
           ${hist.slice(-6).reverse().map((h) => `
             <li>
               <a href="#/sessao/${esc(h.id)}">
                 <span>${fmtDataCurta(h.quando)}</span>
-                <span>${h.sets.map((x) => (x.peso ? `${fmtPeso(x.peso)}×${x.reps}` : `${x.reps} reps`)).join(', ')}</span>
+                <span>${h.sets.map((x) => (ehCardio(ex) ? fmtSerie(x, ex) : (x.peso ? `${fmtPeso(x.peso)}×${x.reps}` : `${x.reps} reps`))).join(', ')}</span>
                 ${h.joelho > 0 ? `<span class="tag n${h.joelho}">${nomesJoelho[h.joelho]}</span>` : ''}
               </a>
             </li>`).join('')}
@@ -348,6 +352,9 @@ export function viewExercicio(app, { id }) {
   app.addEventListener('click', (e) => {
     if (e.target.closest('[data-voltar]')) { history.length > 1 ? history.back() : (location.hash = '#/fichas'); return; }
     if (e.target.closest('[data-video]')) { abrirVideo(ex); return; }
+    if (e.target.closest('[data-ver-img]')) { abrirImagem(ex); return; }
+    if (e.target.closest('[data-foto]')) { escolherFoto(ex, recarregar); return; }
+    if (e.target.closest('[data-tirar-foto]')) { tirarFoto(ex, recarregar); toast('Foto removida.'); return; }
     if (e.target.closest('[data-tirar-video]')) {
       update((st) => { st.exercicios[id].video = ''; }, false);
       recarregar();
@@ -457,7 +464,7 @@ export function viewSessao(app, { id }) {
           return `
           <li>
             <a class="sessao-ex-nome" href="#/ex/${encodeURIComponent(exId)}">${esc(ex.nome)}${(x.recordes || []).includes(exId) ? `<span class="tag rec">${icone.chama}<span>Nova carga máxima</span></span>` : ''}</a>
-            <p>${lista.map((y) => (y.peso ? `${fmtPeso(y.peso)} kg × ${y.reps}` : `${y.reps} reps`)).join(', ')}</p>
+            <p>${lista.map((y) => fmtSerie(y, ex)).join(', ')}</p>
             ${j > 0 ? `<p class="tag n${j}">Joelho: ${nomesJoelho[j]}</p>` : ''}
           </li>`;
         }).join('')}
@@ -523,6 +530,7 @@ function resultadoImportacao(r, saida) {
   if (r.atualizadas) partes.push(plural(r.atualizadas, 'ficha atualizada', 'fichas atualizadas'));
   if (r.novosEx) partes.push(plural(r.novosEx, 'exercício novo', 'exercícios novos'));
   if (r.exAtualizados) partes.push(plural(r.exAtualizados, 'exercício atualizado', 'exercícios atualizados'));
+  if (r.removidas) partes.push(plural(r.removidas, 'ficha antiga removida', 'fichas antigas removidas'));
   if (r.agendaMudou) partes.push('agenda da semana atualizada');
   saida.textContent = partes.length ? `Pronto: ${partes.join(', ')}.` : 'Importado. Nada mudou nas fichas.';
 }
@@ -569,6 +577,13 @@ export function viewAjustes(app) {
       </section>
 
       <section class="secao">
+        <h2 class="secao-titulo">Plano pronto</h2>
+        <p class="nota">Fichas v3: quatro dias por semana, foco em glúteo e perna, joelho em fase 2 e cardio no fim de cada treino. Troca as fichas antigas e mantém seu histórico, seus vídeos e suas fotos.</p>
+        <button class="btn btn-prim btn-bloco" data-plano="planos/v3.json">Carregar fichas v3</button>
+        <div class="import-saida" data-saida-plano aria-live="polite"></div>
+      </section>
+
+      <section class="secao">
         <h2 class="secao-titulo">Importar ficha</h2>
         <p class="nota">Peça a ficha no chat, copie o bloco de código que vier e cole aqui. Fichas com o mesmo id são atualizadas, e os vídeos que você salvou continuam.</p>
         <textarea class="import-texto" data-import placeholder='Cole aqui o texto da ficha, começando em {' rows="6" spellcheck="false" autocapitalize="off" autocomplete="off"></textarea>
@@ -594,7 +609,7 @@ export function viewAjustes(app) {
         <h2 class="secao-titulo">Dados</h2>
         <button class="link link-perigo" data-apagar>${icone.lixo}<span>Apagar tudo neste aparelho</span></button>
       </section>
-      <p class="rodape-nota">Treinos, versão 1</p>
+      <p class="rodape-nota">Treinos, versão 2</p>
     </div>`;
 
   const saida = app.querySelector('[data-saida]');
@@ -624,6 +639,19 @@ export function viewAjustes(app) {
     const passo = t.closest('[data-passo]');
     if (passo) { update((st) => { st.config.passo = Number(passo.dataset.passo); }, false); recarregar(); return; }
     if (t.closest('[data-som]')) { update((st) => { st.config.som = !st.config.som; }, false); recarregar(); return; }
+    const plano = t.closest('[data-plano]');
+    if (plano) {
+      const out = app.querySelector('[data-saida-plano]');
+      try {
+        const res = await fetch(plano.dataset.plano, { cache: 'no-cache' });
+        if (!res.ok) throw new Error('http');
+        resultadoImportacao(importarTexto(await res.text()), out);
+      } catch (err) {
+        out.className = 'import-saida erro';
+        out.textContent = 'Não consegui carregar o plano. Abra o app com internet uma vez e tente de novo.';
+      }
+      return;
+    }
     if (t.closest('[data-importar]')) { if (!area.value.trim()) { toast('Cole o texto da ficha primeiro.'); return; } processar(area.value); return; }
     if (t.closest('[data-colar]')) {
       try { area.value = await navigator.clipboard.readText(); if (area.value.trim()) processar(area.value); else toast('A área de transferência está vazia.'); }

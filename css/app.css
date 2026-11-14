@@ -439,4 +439,47 @@ body.em-treino .descanso { bottom: calc(var(--base) + 86px); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
   .cena .sol.antes { transform: translateY(var(--y)); }
+  .ex-img .troca.b { animation: none !important; opacity: 0; }
 }
+
+
+/* ---------- imagem do exercício ---------- */
+.ex-img { position: relative; width: 100%; margin: 16px 0 10px; border-radius: 22px; overflow: hidden; background: #0f0e24; aspect-ratio: 16 / 10; max-height: 232px; }
+.ex-img-ver { position: absolute; inset: 0; display: block; width: 100%; padding: 0; border: 0; background: transparent; }
+.ex-img img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.ex-img .troca { position: absolute; inset: 0; }
+.ex-img .troca.b { opacity: 0; animation: troca 3.6s ease-in-out infinite; }
+@keyframes troca { 0%, 36% { opacity: 0; } 48%, 86% { opacity: 1; } 100% { opacity: 0; } }
+.ex-img-selo {
+  position: absolute; left: 10px; top: 10px; padding: 3px 10px; border-radius: 99px;
+  background: rgba(15,14,36,.62); color: #fff; font: 600 12.5px var(--texto); pointer-events: none;
+}
+.ex-img-cam {
+  position: absolute; right: 8px; top: 8px; display: grid; place-items: center; width: 44px; height: 44px; padding: 0;
+  border: 0; border-radius: 50%; background: rgba(15,14,36,.62); color: #fff;
+}
+.ex-img-cam svg { width: 22px; height: 22px; }
+.ex-img-video {
+  position: absolute; left: 10px; bottom: 10px; display: flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 16px 0 12px;
+  border: 0; border-radius: 99px; background: var(--sol); color: #17163a; font: 700 15px var(--texto);
+  box-shadow: 0 4px 14px rgba(15,14,36,.35);
+}
+.ex-img-video svg { width: 16px; height: 16px; }
+.ex-img-vazia {
+  display: grid; place-items: center; aspect-ratio: auto; min-height: 128px; padding: 18px; text-align: center;
+  border: 1.5px dashed var(--linha); background: transparent; color: var(--tinta-2);
+}
+.ex-img-vazio { display: grid; justify-items: center; gap: 4px; }
+.ex-img-vazio svg { width: 28px; height: 28px; color: var(--anil); }
+.ex-img-vazio strong { color: var(--tinta); font-size: 16px; }
+.ex-img-vazio span { font-size: 14px; max-width: 28ch; }
+.ex-add-foto { margin: 0 0 6px; }
+.mini-img { background: #0f0e24; }
+.sheet-imagem .img-pilha { display: grid; gap: 14px; margin-top: 12px; }
+.sheet-imagem .img-fig { margin: 0; }
+.sheet-imagem .img-grande { display: block; width: 100%; height: auto; border-radius: 16px; }
+.sheet-imagem figcaption { margin-top: 5px; color: var(--tinta-2); font-size: 13.5px; }
+
+/* ---------- cardio ---------- */
+.serie-cardio, .series-cab-cardio { grid-template-columns: 26px 1fr 52px; }
+.campo-un { flex: none; margin-right: 2px; color: var(--tinta-2); font: 600 15px var(--texto); }

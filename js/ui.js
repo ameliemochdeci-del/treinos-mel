@@ -25,6 +25,7 @@ export const icone = {
   externo: tracos('<path d="M14 4h6v6M20 4l-9 9M18 14v4.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10"/>'),
   relogio: tracos('<circle cx="12" cy="13" r="7.5"/><path d="M12 9v4l2.5 1.5M9.5 2.5h5"/>'),
   haltere: tracos('<path d="M6.5 7v10M17.5 7v10M3.5 9.5v5M20.5 9.5v5M6.5 12h11"/>'),
+  camera: tracos('<path d="M4.5 8.5a2 2 0 0 1 2-2h1.6l1.2-2h5.4l1.2 2h1.6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-11a2 2 0 0 1-2-2z"/><circle cx="12" cy="12.5" r="3.4"/>'),
   chama: tracos('<path d="M12 3c.5 3-3.5 4.8-3.5 9a3.5 3.5 0 0 0 7 0c0-1.5-.7-2.5-1.5-3.5 0 1.5-.8 2-1.5 2 .8-2.2 0-5.5-.5-7.5z"/>')
 };
 
@@ -32,6 +33,14 @@ export const icone = {
 export function fmtPeso(n) {
   const v = Number(n) || 0;
   return (Number.isInteger(v) ? String(v) : v.toFixed(1)).replace('.', ',');
+}
+
+export const ehCardio = (ex) => !!ex && /^cardio$/i.test(ex.grupo || '');
+
+// Série registrada: "40 kg × 12", "30 s", "15 min" ou "12 reps".
+export function fmtSerie(x, ex) {
+  if (ehCardio(ex)) return `${x.reps} min`;
+  return x.peso ? `${fmtPeso(x.peso)} kg × ${x.reps}` : `${x.reps} reps`;
 }
 
 export function fmtTempo(seg) {
