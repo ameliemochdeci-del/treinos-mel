@@ -1,6 +1,6 @@
 // Service worker: guarda o app inteiro no aparelho para abrir rápido e funcionar sem internet.
 // Ao mudar qualquer arquivo do app, aumente VERSAO para o celular baixar a versão nova.
-const VERSAO = 'v2';
+const VERSAO = 'v3';
 const CACHE = `treinos-${VERSAO}`;
 const ARQUIVOS = [
   './',
@@ -81,7 +81,12 @@ const ARQUIVOS = [
 ];
 
 self.addEventListener('install', (e) => {
-  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ARQUIVOS)).then(() => self.skipWaiting()));
+  // cache: 'reload' pula o cache do navegador, que pode guardar arquivos velhos por uns 10 minutos
+  e.waitUntil(
+    caches.open(CACHE)
+      .then((c) => Promise.all(ARQUIVOS.map((u) => c.add(new Request(u, { cache: 'reload' })))))
+      .then(() => self.skipWaiting())
+  );
 });
 
 self.addEventListener('activate', (e) => {
