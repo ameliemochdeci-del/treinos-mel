@@ -4,44 +4,14 @@ import { fotoDe, salvarFoto, removerFoto } from './store.js';
 import { esc, icone, abrirFolha, toast } from './ui.js';
 
 // Imagem de referência padrão de cada exercício (vale mesmo sem carregar o plano).
-const REF_PADRAO = {
- "ponte-minibanda": "ponte-glute",
- "mesa-flexora": "mesa-flexora",
- "terra-romeno-halteres": "terra-romeno",
- "cadeira-abdutora": "abdutora",
- "pelvica-unilateral": "ponte-unilateral",
- "cadeira-flexora": "cadeira-flexora",
- "panturrilha-em-pe": "panturrilha-em-pe",
- "prancha-lateral": "prancha-lateral",
- "supino-maquina": "supino-maquina",
- "desenvolvimento-halteres": "desenvolvimento",
- "crucifixo-maquina": "peck-deck",
- "elevacao-lateral": "elevacao-lateral",
- "triceps-corda": "triceps-corda",
- "prancha": "prancha",
-  "remada-baixa": "remada-baixa",
- "remada-maquina": "remada-maquina",
- "crucifixo-inverso": "crucifixo-inverso",
- "rosca-martelo": "rosca-martelo",
- "dead-bug": "dead-bug",
- "cadeira-extensora": "extensora",
- "hiperextensao-45": "hiperextensao",
- "coice-cabo": "coice-cabo",
- "cardio-bike": "bike",
- "cardio-eliptico": "eliptico",
- "cardio-esteira": "esteira"
-};
-
-// Imagens tiradas do app por mostrarem execução arriscada. Ignora mesmo se já estiverem salvas no aparelho.
-const REF_REMOVIDAS = new Set(['puxada', 'hip-thrust', 'leg-press']);
+// Ilustrações próprias (figura feminina, técnica segura para o joelho). Duas posições por exercício.
+const ILU = new Set(["abducao-cabo", "cadeira-abdutora", "cadeira-extensora", "cadeira-flexora", "cardio-bike", "cardio-eliptico", "cardio-esteira", "cardio-livre", "coice-cabo", "crucifixo-inverso", "crucifixo-maquina", "dead-bug", "desenvolvimento-halteres", "elevacao-lateral", "hip-thrust-maquina", "hiperextensao-45", "isometria-quadriceps", "leg-press", "mesa-flexora", "mobilidade-tornozelo", "panturrilha-em-pe", "pelvica-unilateral", "ponte-minibanda", "prancha", "prancha-lateral", "puxada-frente", "remada-baixa", "remada-maquina", "rosca-martelo", "supino-maquina", "terra-romeno-halteres", "triceps-corda"]);
 
 export function imagemDe(ex) {
   const foto = fotoDe(ex.id);
   if (foto) return { tipo: 'foto', src: foto };
-  let ref = (ex.ref && /^[a-z0-9-]+$/.test(ex.ref)) ? ex.ref : REF_PADRAO[ex.id];
-  if (REF_REMOVIDAS.has(ref)) ref = '';
-  if (ref) {
-    return { tipo: 'ref', a: `img/ref/${ref}-0.jpg`, b: `img/ref/${ref}-1.jpg` };
+  if (ILU.has(ex.id)) {
+    return { tipo: 'ref', a: `img/ilu/${ex.id}-0.svg`, b: `img/ilu/${ex.id}-1.svg` };
   }
   return null;
 }
@@ -70,7 +40,7 @@ export function blocoImagem(ex, { video = false, vazio = false } = {}) {
     : `<img class="troca a" src="${im.a}" alt="${esc(ex.nome)}, posição inicial"><img class="troca b" src="${im.b}" alt="posição final">`;
   return `<div class="ex-img">
     <button class="ex-img-ver" data-ver-img aria-label="Ampliar imagem">${miolo}</button>
-    <span class="ex-img-selo">${im.tipo === 'foto' ? 'Sua foto' : 'Referência'}</span>
+    <span class="ex-img-selo">${im.tipo === 'foto' ? 'Sua foto' : 'Ilustração'}</span>
     <button class="ex-img-cam" data-foto aria-label="${im.tipo === 'foto' ? 'Trocar foto do aparelho' : 'Tirar foto do meu aparelho'}">${icone.camera}</button>
     ${pilula}
   </div>`;
@@ -86,7 +56,7 @@ export function abrirImagem(ex, aoFechar) {
   abrirFolha(`
     <h2 class="sheet-titulo">${esc(ex.nome)}</h2>
     <div class="img-pilha">${corpo}</div>
-    <p class="sheet-nota">${im.tipo === 'foto' ? 'Foto tirada por você.' : 'Imagem de referência. O aparelho da sua academia pode ser um pouco diferente.'}</p>`,
+    <p class="sheet-nota">${im.tipo === 'foto' ? 'Foto tirada por você.' : 'Ilustração das duas posições. O aparelho da sua academia pode ser um pouco diferente. Para os detalhes, veja o vídeo.'}</p>`,
   { classe: 'sheet-imagem', aoFechar });
 }
 
