@@ -5,6 +5,8 @@ import { esc, icone, abrirFolha, toast } from './ui.js';
 
 // Imagem de referência padrão de cada exercício (vale mesmo sem carregar o plano).
 const REF_PADRAO = {
+ "leg-press": "leg-press",
+ "puxada-frente": "puxada-frente",
  "ponte-minibanda": "ponte-glute",
  "mesa-flexora": "mesa-flexora",
  "terra-romeno-halteres": "terra-romeno",
@@ -33,7 +35,7 @@ const REF_PADRAO = {
 };
 
 // Ilustrações próprias, só para exercícios sem foto de referência segura.
-const ILU = new Set(["hip-thrust-maquina", "leg-press", "puxada-frente", "mobilidade-tornozelo", "isometria-quadriceps", "abducao-cabo", "cardio-livre"]);
+const ILU = new Set(["hip-thrust-maquina", "mobilidade-tornozelo", "isometria-quadriceps", "abducao-cabo", "cardio-livre"]);
 
 export function imagemDe(ex) {
   const foto = fotoDe(ex.id);
