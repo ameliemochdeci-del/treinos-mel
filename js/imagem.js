@@ -40,7 +40,9 @@ const ILU = new Set(["hip-thrust-maquina", "mobilidade-tornozelo", "isometria-qu
 export function imagemDe(ex) {
   const foto = fotoDe(ex.id);
   if (foto) return { tipo: 'foto', src: foto };
-  const ref = (ex.ref && /^[a-z0-9-]+$/.test(ex.ref)) ? ex.ref : REF_PADRAO[ex.id];
+  // um ref antigo salvo no aparelho só vale se a foto ainda existe no app
+  const refs = Object.values(REF_PADRAO);
+  const ref = REF_PADRAO[ex.id] || (refs.includes(ex.ref) ? ex.ref : '');
   if (ref) return { tipo: 'ref', a: `img/ref/${ref}-0.jpg`, b: `img/ref/${ref}-1.jpg` };
   if (ILU.has(ex.id)) {
     return { tipo: 'ilu', a: `img/ilu/${ex.id}-0.svg`, b: `img/ilu/${ex.id}-1.svg` };

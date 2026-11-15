@@ -1,6 +1,6 @@
 // Service worker: guarda o app inteiro no aparelho para abrir rápido e funcionar sem internet.
 // Ao mudar qualquer arquivo do app, aumente VERSAO para o celular baixar a versão nova.
-const VERSAO = 'v9';
+const VERSAO = 'v10';
 const CACHE = `treinos-${VERSAO}`;
 const ARQUIVOS = [
   './',
