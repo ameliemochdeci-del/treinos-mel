@@ -21,7 +21,7 @@ const ARQUIVOS = [
   'planos/v3.json',
   'icons/icon-192.png',
   'icons/icon-512.png',
-  'icons/apple-touch-icon.png'
+  'icons/apple-touch-icon.png',
   'img/ilu/abducao-cabo-0.svg',
   'img/ilu/abducao-cabo-1.svg',
   'img/ilu/cadeira-abdutora-0.svg',
