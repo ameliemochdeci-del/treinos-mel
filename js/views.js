@@ -606,10 +606,16 @@ export function viewAjustes(app) {
       </section>
 
       <section class="secao">
+        <h2 class="secao-titulo">Atualizar o app</h2>
+        <p class="nota">Se algo novo não aparecer (imagens, botões), toque aqui. Baixa tudo de novo e não apaga seus treinos, fichas, vídeos nem fotos.</p>
+        <button class="btn btn-sec btn-bloco" data-atualizar>Baixar a versão mais nova</button>
+      </section>
+
+      <section class="secao">
         <h2 class="secao-titulo">Dados</h2>
         <button class="link link-perigo" data-apagar>${icone.lixo}<span>Apagar tudo neste aparelho</span></button>
       </section>
-      <p class="rodape-nota">Treinos, versão 2</p>
+      <p class="rodape-nota">Treinos, versão 2, build 4</p>
     </div>`;
 
   const saida = app.querySelector('[data-saida]');
@@ -665,6 +671,17 @@ export function viewAjustes(app) {
     }
     if (t.closest('[data-exemplo-a]')) { const r = importarTexto(JSON.stringify(EXEMPLO)); resultadoImportacao(r, saida); return; }
     if (t.closest('[data-exportar]')) { exportarBackup(); return; }
+    if (t.closest('[data-atualizar]')) {
+      toast('Baixando a versão mais nova…');
+      try {
+        const regs = (navigator.serviceWorker && (await navigator.serviceWorker.getRegistrations())) || [];
+        await Promise.all(regs.map((r) => r.unregister()));
+        const chaves = (window.caches && (await caches.keys())) || [];
+        await Promise.all(chaves.map((k) => caches.delete(k)));
+      } catch (err) { /* segue mesmo assim */ }
+      setTimeout(() => location.reload(), 600);
+      return;
+    }
     if (t.closest('[data-apagar]')) {
       const ok = await confirmar({ titulo: 'Apagar tudo?', texto: 'Fichas, histórico e ajustes somem deste aparelho. Salve um backup antes se quiser guardar.', ok: 'Apagar tudo', perigo: true });
       if (ok) { apagarTudo(); toast('Tudo apagado.'); recarregar(); }

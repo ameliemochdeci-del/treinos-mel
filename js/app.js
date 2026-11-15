@@ -58,5 +58,13 @@ pedirArmazenamentoPersistente();
 renderizar();
 
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+  // Quando uma versão nova do app assume, recarrega uma vez para você já ver a versão nova.
+  const tinhaControlador = !!navigator.serviceWorker.controller;
+  let recarregou = false;
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (!tinhaControlador || recarregou) return;
+    recarregou = true;
+    location.reload();
+  });
   window.addEventListener('load', () => { navigator.serviceWorker.register('sw.js').catch(() => { /* sem cache offline */ }); });
 }
