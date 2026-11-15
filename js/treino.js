@@ -138,7 +138,7 @@ export function viewTreino(app) {
     const sets = seriesDe(item);
     const ult = ultimoRegistro(item.ex, r.id);
     const v = lerVideo(ex.video);
-    const temDicas = (ex.dicas && ex.dicas.length) || ex.cuidado;
+    const temDicas = (ex.dicas && ex.dicas.length) || ex.cuidado || ex.aparelho;
     const ultTxt = ult
       ? `Última vez em ${fmtDataCurta(ult.quando)}: ${ult.sets.length} ${ult.sets.length === 1 ? 'série' : 'séries'} com até ${fmtPeso(Math.max(...ult.sets.map((x) => x.peso)))} kg`
       : 'Primeira vez neste exercício. Anote a carga que usar.';
@@ -183,6 +183,7 @@ export function viewTreino(app) {
       ${temDicas ? `
       <details class="dicas" ${ult ? '' : 'open'}>
         <summary>${icone.dica}<span>Como fazer</span></summary>
+        ${ex.aparelho ? `<p class="aparelho"><strong>Qual aparelho:</strong> ${esc(ex.aparelho)}</p>` : ''}
         ${ex.dicas && ex.dicas.length ? `<ul>${ex.dicas.map((d) => `<li>${esc(d)}</li>`).join('')}</ul>` : ''}
         ${ex.cuidado ? `<p class="cuidado">${esc(ex.cuidado)}</p>` : ''}
       </details>` : ''}

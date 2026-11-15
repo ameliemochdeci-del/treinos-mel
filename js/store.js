@@ -216,6 +216,7 @@ export function importarTexto(texto) {
         nome: e.nome,
         grupo: e.grupo || (antigo && antigo.grupo) || '',
         dicas: Array.isArray(e.dicas) ? e.dicas : (antigo && antigo.dicas) || [],
+        aparelho: e.aparelho !== undefined ? String(e.aparelho) : (antigo && antigo.aparelho) || '',
         cuidado: e.cuidado !== undefined ? e.cuidado : (antigo && antigo.cuidado) || '',
         monitorar: e.monitorar !== undefined ? String(e.monitorar) : (antigo && antigo.monitorar) || '',
         // o link de vídeo que você salvou no app não é apagado por uma importação sem vídeo

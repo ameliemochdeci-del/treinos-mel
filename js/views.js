@@ -325,9 +325,10 @@ export function viewExercicio(app, { id }) {
         ${ex.video ? `<button class="link link-quieto" data-tirar-video>Remover vídeo</button>` : ''}
       </section>
 
-      ${(ex.dicas && ex.dicas.length) || ex.cuidado ? `
+      ${(ex.dicas && ex.dicas.length) || ex.cuidado || ex.aparelho ? `
       <section class="secao">
         <h2 class="secao-titulo">Como fazer</h2>
+        ${ex.aparelho ? `<p class="aparelho"><strong>Qual aparelho:</strong> ${esc(ex.aparelho)}</p>` : ''}
         ${ex.dicas && ex.dicas.length ? `<ul class="dicas-lista">${ex.dicas.map((d) => `<li>${esc(d)}</li>`).join('')}</ul>` : ''}
         ${ex.cuidado ? `<p class="cuidado">${esc(ex.cuidado)}</p>` : ''}
       </section>` : ''}
@@ -615,7 +616,7 @@ export function viewAjustes(app) {
         <h2 class="secao-titulo">Dados</h2>
         <button class="link link-perigo" data-apagar>${icone.lixo}<span>Apagar tudo neste aparelho</span></button>
       </section>
-      <p class="rodape-nota">Treinos, versão 2, build 7</p>
+      <p class="rodape-nota">Treinos, versão 2, build 8</p>
     </div>`;
 
   const saida = app.querySelector('[data-saida]');

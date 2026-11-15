@@ -236,6 +236,7 @@ body.em-treino .rota { padding-bottom: 0; }
 .video-form { display: flex; gap: 8px; }
 .video-form input { flex: 1; min-width: 0; height: 48px; padding: 0 14px; border-radius: 14px; border: 1px solid var(--linha); background: var(--superficie); font-size: 16px; }
 .dicas-lista { padding-left: 20px; display: grid; gap: 6px; }
+.aparelho { margin: 0 0 12px; padding: 12px 14px; border-radius: 14px; background: var(--anil-suave); font-size: 15px; }
 .cuidado { margin-top: 12px; padding: 12px 14px; border-radius: 14px; border-left: 4px solid var(--sol); background: var(--ambar-suave); font-size: 15px; }
 .grafico { width: 100%; height: auto; display: block; margin-top: 4px; }
 .grafico-area { fill: var(--anil); opacity: .12; }

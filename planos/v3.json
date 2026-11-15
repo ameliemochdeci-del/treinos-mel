@@ -35,7 +35,8 @@
     "Queixo levemente recolhido, costelas para baixo, sem arquear a lombar no topo.",
     "Comece leve até acertar o movimento. Veja se o apoio está na altura certa para não deslizar."
    ],
-   "video": "https://www.youtube.com/watch?v=CQebwTfJjas"
+   "video": "https://www.youtube.com/watch?v=CQebwTfJjas",
+   "aparelho": "Procure a máquina de elevação pélvica / hip thrust (às vezes chamada \"glute bridge machine\"): um banco baixo para apoiar as costas e uma barra ou cinto acolchoado que fica sobre o quadril. Se a academia não tiver, a alternativa é o banco reto com barra ou halter sobre o quadril."
   },
   {
    "id": "mesa-flexora",
@@ -46,7 +47,8 @@
     "Quadril colado no banco e rolete logo acima do calcanhar.",
     "Suba sem balançar e sem levantar o quadril. Desça em 3 segundos."
    ],
-   "video": "https://www.youtube.com/watch?v=dMYsB4Eb2BY"
+   "video": "https://www.youtube.com/watch?v=dMYsB4Eb2BY",
+   "aparelho": "Procure a mesa flexora: você deita de barriga para baixo em um banco acolchoado e o rolete fica logo acima do calcanhar. Ela é diferente da cadeira flexora, em que você fica sentada."
   },
   {
    "id": "terra-romeno-halteres",
@@ -56,7 +58,8 @@
    "dicas": [
     "Joelhos levemente dobrados e fixos: o movimento vem do quadril, empurrando-o para trás.",
     "Halteres deslizam perto das pernas. Coluna reta, olhar para o chão um pouco à frente, sem levantar a cabeça.",
-    "Desça só até sentir alongar atrás da coxa (em geral abaixo do joelho ou perto da canela). Suba apertando o glúteo."
+    "Desça só até sentir alongar atrás da coxa (em geral abaixo do joelho ou perto da canela). Suba apertando o glúteo.",
+    "Na foto de referência a pessoa usa barra; com halteres o movimento é o mesmo."
    ],
    "cuidado": "Pare de descer quando a coluna começar a arredondar.",
    "video": "https://www.youtube.com/watch?v=9-ddTPZ5gok"
@@ -69,7 +72,8 @@
     "Encosto firme e tronco estável. Não puxe o tronco para frente nem balance para ajudar.",
     "Abra sem pressa, sem tranco, e controle a volta sem deixar o peso bater."
    ],
-   "video": "https://www.youtube.com/watch?v=_vDDFsPbubs"
+   "video": "https://www.youtube.com/watch?v=_vDDFsPbubs",
+   "aparelho": "Procure a cadeira abdutora (a \"cadeira de abrir as pernas\"): sentada, com almofadas na parte de fora dos joelhos, e você empurra para os lados. Costuma ficar ao lado da adutora, que fecha as pernas, então confira o desenho na máquina."
   },
   {
    "id": "pelvica-unilateral",
@@ -92,7 +96,8 @@
     "Joelho alinhado ao eixo da máquina.",
     "Puxe sem tirar o quadril do banco e volte em 3 segundos."
    ],
-   "video": "https://www.youtube.com/watch?v=AFG0wxXmTH4"
+   "video": "https://www.youtube.com/watch?v=AFG0wxXmTH4",
+   "aparelho": "Procure a cadeira flexora: sentada, com uma almofada em cima da coxa e o rolete atrás do tornozelo. Você puxa o rolete para baixo e para trás."
   },
   {
    "id": "panturrilha-em-pe",
@@ -124,7 +129,8 @@
     "Empurre sem travar os cotovelos no final.",
     "Volte devagar, contando 2 segundos."
    ],
-   "video": "https://www.youtube.com/watch?v=WGdi4iTfza8"
+   "video": "https://www.youtube.com/watch?v=WGdi4iTfza8",
+   "aparelho": "Procure a máquina de supino (chest press): sentada, com encosto, e duas alças na altura do peito que você empurra para a frente."
   },
   {
    "id": "desenvolvimento-halteres",
@@ -145,7 +151,8 @@
     "Cotovelos levemente flexionados e fixos.",
     "Junte os braços sem encolher os ombros."
    ],
-   "video": "https://www.youtube.com/watch?v=FzCnfD0gOXo"
+   "video": "https://www.youtube.com/watch?v=FzCnfD0gOXo",
+   "aparelho": "Procure o peck deck (voador): sentada, com os antebraços apoiados em duas almofadas na frente do peito, e você junta os braços."
   },
   {
    "id": "elevacao-lateral",
@@ -188,7 +195,8 @@
     "Volte devagar, deixando o braço esticar sem soltar o ombro para cima."
    ],
    "video": "https://www.youtube.com/watch?v=YywSCu4Y360",
-   "cuidado": "Se sentir pinçar no ombro, use pegada um pouco mais fechada ou diminua a carga."
+   "cuidado": "Se sentir pinçar no ombro, use pegada um pouco mais fechada ou diminua a carga.",
+   "aparelho": "Procure a polia alta (puxada, pulley): sentada, com almofadas que prendem as coxas e uma barra larga no alto que você puxa para baixo."
   },
   {
    "id": "remada-baixa",
@@ -199,7 +207,8 @@
     "Puxe os cotovelos para trás, perto do corpo, juntando as escápulas.",
     "Joelhos levemente dobrados. Não balance o tronco para ajudar."
    ],
-   "video": "https://www.youtube.com/watch?v=f8AVh4VBbos"
+   "video": "https://www.youtube.com/watch?v=f8AVh4VBbos",
+   "aparelho": "Procure a remada baixa no cabo: sentada com os pés apoiados na plataforma, e um cabo na altura do chão com uma alça triangular que você puxa na direção da barriga."
   },
   {
    "id": "remada-maquina",
@@ -209,7 +218,8 @@
     "Peito encostado no apoio.",
     "Puxe os cotovelos para trás e aproxime as escápulas."
    ],
-   "video": "https://www.youtube.com/watch?v=QyvIEdEHzHc"
+   "video": "https://www.youtube.com/watch?v=QyvIEdEHzHc",
+   "aparelho": "Procure a remada sentada com apoio no peito: você encosta o peito na almofada e puxa duas alças para trás."
   },
   {
    "id": "crucifixo-inverso",
@@ -219,7 +229,8 @@
     "Peito no apoio e cotovelos levemente flexionados.",
     "Abra os braços sem encolher os ombros."
    ],
-   "video": "https://www.youtube.com/watch?v=wjlX-5DTjBQ"
+   "video": "https://www.youtube.com/watch?v=wjlX-5DTjBQ",
+   "aparelho": "Procure o mesmo peck deck, mas virada de frente para o aparelho, com o peito encostado no apoio. Muitos aparelhos servem para os dois movimentos, e a pegada das alças muda de lugar."
   },
   {
    "id": "rosca-martelo",
@@ -254,7 +265,8 @@
     "Suba empurrando com o calcanhar e o meio do pé, sem travar o joelho no topo. Quadril e lombar colados no encosto.",
     "Comece no que você já faz sem dor (hoje uns 12 kg). Só suba 1 a 2 kg quando a semana anterior tiver sido tranquila."
    ],
-   "cuidado": "Regra do joelho: dor até 3 de 10 durante e joelho igual ou melhor na manhã seguinte. Se amanhecer pior, repita ou diminua a carga no próximo treino. Dor forte: pare o exercício. O vídeo escolhido fala de como evitar dor no joelho, mas vá só até 60 a 70° de dobra do joelho, como está nas dicas."
+   "cuidado": "Regra do joelho: dor até 3 de 10 durante e joelho igual ou melhor na manhã seguinte. Se amanhecer pior, repita ou diminua a carga no próximo treino. Dor forte: pare o exercício. O vídeo escolhido fala de como evitar dor no joelho, mas vá só até 60 a 70° de dobra do joelho, como está nas dicas.",
+   "aparelho": "Procure o leg press: você fica deitada ou reclinada em um assento e empurra uma plataforma com os pés. Pode ser o de 45° (plataforma inclinada) ou o horizontal. Confira onde fica o pino de segurança e o limitador de amplitude."
   },
   {
    "id": "cadeira-extensora",
@@ -266,9 +278,11 @@
     "Regule o encosto para o joelho ficar alinhado com o eixo da máquina e o rolete logo acima do tornozelo.",
     "Suba contando 3 segundos e desça contando 3. Sem balanço e sem tranco.",
     "Comece com a carga mínima que você já faz sem dor (hoje uns 5 kg). Prefira repetições lentas a carga alta.",
-    "Não precisa travar o joelho lá em cima."
+    "Não precisa travar o joelho lá em cima.",
+    "A foto de referência mostra a perna totalmente esticada. Para você, pare um pouco antes de travar o joelho."
    ],
-   "cuidado": "Regra do joelho: dor até 3 de 10 durante e joelho igual ou melhor na manhã seguinte. Se amanhecer pior, repita ou diminua a carga no próximo treino. Dor forte: pare o exercício. A extensora é o exercício que mais pede do tendão: aumente a carga de pouquinho em pouquinho."
+   "cuidado": "Regra do joelho: dor até 3 de 10 durante e joelho igual ou melhor na manhã seguinte. Se amanhecer pior, repita ou diminua a carga no próximo treino. Dor forte: pare o exercício. A extensora é o exercício que mais pede do tendão: aumente a carga de pouquinho em pouquinho.",
+   "aparelho": "Procure a cadeira extensora: sentada, com um rolete na frente da canela e um pino para regular a carga. Você estica o joelho levantando o rolete."
   },
   {
    "id": "hiperextensao-45",
@@ -281,7 +295,8 @@
     "Não passe da linha reta: arquear a lombar tira o trabalho do glúteo.",
     "Segure 1 segundo no topo. Quando ficar fácil, segure uma anilha ou halter no peito."
    ],
-   "cuidado": "Suba só até o corpo ficar em linha reta. Passar disso é arquear a lombar. Se a lombar incomodar, diminua a amplitude."
+   "cuidado": "Suba só até o corpo ficar em linha reta. Passar disso é arquear a lombar. Se a lombar incomodar, diminua a amplitude.",
+   "aparelho": "Procure o banco de hiperextensão a 45° (banco romano): inclinado, com uma almofada para o quadril e um apoio para os calcanhares."
   },
   {
    "id": "coice-cabo",
@@ -294,7 +309,8 @@
     "Costelas para baixo, quadril quadrado, sem girar. O movimento é pequeno e curto.",
     "Volte devagar, sem encostar o peso na pilha."
    ],
-   "cuidado": ""
+   "cuidado": "",
+   "aparelho": "Procure a polia baixa com tornozeleira. Algumas academias têm um aparelho específico de glúteo (glute kickback machine); se tiver, vale testar."
   },
   {
    "id": "cardio-bike",
@@ -306,7 +322,8 @@
     "Ritmo em que dá para conversar (uns 5 a 6 de 10), resistência leve."
    ],
    "cuidado": "Se o joelho passar de 3 de 10, troque por elíptico.",
-   "video": "https://www.youtube.com/watch?v=B7FF5kCiqoU"
+   "video": "https://www.youtube.com/watch?v=B7FF5kCiqoU",
+   "aparelho": "Procure a bicicleta ergométrica vertical (com selim) ou a reclinada. Regule o selim para o joelho ficar quase esticado no ponto mais baixo."
   },
   {
    "id": "cardio-eliptico",
@@ -317,7 +334,8 @@
     "Sem impacto. Postura alta, olhar à frente, sem se apoiar nas alças com o peso do corpo.",
     "Ritmo em que dá para conversar (uns 5 a 6 de 10)."
    ],
-   "cuidado": "Se o joelho passar de 3 de 10, diminua o ritmo ou troque por bicicleta."
+   "cuidado": "Se o joelho passar de 3 de 10, diminua o ritmo ou troque por bicicleta.",
+   "aparelho": "Procure o elíptico (transport), com pedais que deslizam e alças que se movem."
   },
   {
    "id": "cardio-esteira",
@@ -329,7 +347,8 @@
     "Ritmo em que dá para conversar (uns 5 a 6 de 10)."
    ],
    "cuidado": "Subida forte pede mais do joelho. Se passar de 3 de 10, volte para o plano ou troque por bicicleta. O vídeo é sobre a técnica de caminhar: passada tranquila, pisando com o calcanhar e rolando o pé.",
-   "video": "https://www.youtube.com/watch?v=pRvzvfxUrK4"
+   "video": "https://www.youtube.com/watch?v=pRvzvfxUrK4",
+   "aparelho": "Procure a esteira. Use o clipe de segurança preso na roupa."
   },
   {
    "id": "cardio-livre",
@@ -377,7 +396,8 @@
     "Joelho de apoio levemente dobrado e tronco um pouco inclinado à frente. Perna que trabalha esticada.",
     "Leve a perna para o lado sem girar o quadril nem arquear a lombar. Volte controlando."
    ],
-   "video": "https://www.youtube.com/watch?v=CoLnjRKWYOU"
+   "video": "https://www.youtube.com/watch?v=CoLnjRKWYOU",
+   "aparelho": "Procure a polia baixa com tornozeleira, a mesma do coice no cabo."
   }
  ],
  "fichas": [
