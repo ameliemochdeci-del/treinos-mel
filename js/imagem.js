@@ -3,11 +3,44 @@
 import { fotoDe, salvarFoto, removerFoto } from './store.js';
 import { esc, icone, abrirFolha, toast } from './ui.js';
 
+// Imagem de referência padrão de cada exercício (vale mesmo sem carregar o plano).
+const REF_PADRAO = {
+ "ponte-minibanda": "ponte-glute",
+ "hip-thrust-maquina": "hip-thrust",
+ "mesa-flexora": "mesa-flexora",
+ "terra-romeno-halteres": "terra-romeno",
+ "cadeira-abdutora": "abdutora",
+ "pelvica-unilateral": "ponte-unilateral",
+ "cadeira-flexora": "cadeira-flexora",
+ "panturrilha-em-pe": "panturrilha-em-pe",
+ "prancha-lateral": "prancha-lateral",
+ "supino-maquina": "supino-maquina",
+ "desenvolvimento-halteres": "desenvolvimento",
+ "crucifixo-maquina": "peck-deck",
+ "elevacao-lateral": "elevacao-lateral",
+ "triceps-corda": "triceps-corda",
+ "prancha": "prancha",
+ "puxada-frente": "puxada",
+ "remada-baixa": "remada-baixa",
+ "remada-maquina": "remada-maquina",
+ "crucifixo-inverso": "crucifixo-inverso",
+ "rosca-martelo": "rosca-martelo",
+ "dead-bug": "dead-bug",
+ "leg-press": "leg-press",
+ "cadeira-extensora": "extensora",
+ "hiperextensao-45": "hiperextensao",
+ "coice-cabo": "coice-cabo",
+ "cardio-bike": "bike",
+ "cardio-eliptico": "eliptico",
+ "cardio-esteira": "esteira"
+};
+
 export function imagemDe(ex) {
   const foto = fotoDe(ex.id);
   if (foto) return { tipo: 'foto', src: foto };
-  if (ex.ref && /^[a-z0-9-]+$/.test(ex.ref)) {
-    return { tipo: 'ref', a: `img/ref/${ex.ref}-0.jpg`, b: `img/ref/${ex.ref}-1.jpg` };
+  const ref = (ex.ref && /^[a-z0-9-]+$/.test(ex.ref)) ? ex.ref : REF_PADRAO[ex.id];
+  if (ref) {
+    return { tipo: 'ref', a: `img/ref/${ref}-0.jpg`, b: `img/ref/${ref}-1.jpg` };
   }
   return null;
 }
