@@ -6,7 +6,6 @@ import { esc, icone, abrirFolha, toast } from './ui.js';
 // Imagem de referência padrão de cada exercício (vale mesmo sem carregar o plano).
 const REF_PADRAO = {
  "ponte-minibanda": "ponte-glute",
- "hip-thrust-maquina": "hip-thrust",
  "mesa-flexora": "mesa-flexora",
  "terra-romeno-halteres": "terra-romeno",
  "cadeira-abdutora": "abdutora",
@@ -20,13 +19,11 @@ const REF_PADRAO = {
  "elevacao-lateral": "elevacao-lateral",
  "triceps-corda": "triceps-corda",
  "prancha": "prancha",
- "puxada-frente": "puxada",
- "remada-baixa": "remada-baixa",
+  "remada-baixa": "remada-baixa",
  "remada-maquina": "remada-maquina",
  "crucifixo-inverso": "crucifixo-inverso",
  "rosca-martelo": "rosca-martelo",
  "dead-bug": "dead-bug",
- "leg-press": "leg-press",
  "cadeira-extensora": "extensora",
  "hiperextensao-45": "hiperextensao",
  "coice-cabo": "coice-cabo",
@@ -35,10 +32,14 @@ const REF_PADRAO = {
  "cardio-esteira": "esteira"
 };
 
+// Imagens tiradas do app por mostrarem execução arriscada. Ignora mesmo se já estiverem salvas no aparelho.
+const REF_REMOVIDAS = new Set(['puxada', 'hip-thrust', 'leg-press']);
+
 export function imagemDe(ex) {
   const foto = fotoDe(ex.id);
   if (foto) return { tipo: 'foto', src: foto };
-  const ref = (ex.ref && /^[a-z0-9-]+$/.test(ex.ref)) ? ex.ref : REF_PADRAO[ex.id];
+  let ref = (ex.ref && /^[a-z0-9-]+$/.test(ex.ref)) ? ex.ref : REF_PADRAO[ex.id];
+  if (REF_REMOVIDAS.has(ref)) ref = '';
   if (ref) {
     return { tipo: 'ref', a: `img/ref/${ref}-0.jpg`, b: `img/ref/${ref}-1.jpg` };
   }

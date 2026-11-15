@@ -615,7 +615,7 @@ export function viewAjustes(app) {
         <h2 class="secao-titulo">Dados</h2>
         <button class="link link-perigo" data-apagar>${icone.lixo}<span>Apagar tudo neste aparelho</span></button>
       </section>
-      <p class="rodape-nota">Treinos, versão 2, build 5</p>
+      <p class="rodape-nota">Treinos, versão 2, build 6</p>
     </div>`;
 
   const saida = app.querySelector('[data-saida]');

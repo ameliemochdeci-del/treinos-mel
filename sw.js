@@ -1,6 +1,6 @@
 // Service worker: guarda o app inteiro no aparelho para abrir rápido e funcionar sem internet.
 // Ao mudar qualquer arquivo do app, aumente VERSAO para o celular baixar a versão nova.
-const VERSAO = 'v5';
+const VERSAO = 'v6';
 const CACHE = `treinos-${VERSAO}`;
 const ARQUIVOS = [
   './',
@@ -41,12 +41,8 @@ const ARQUIVOS = [
   'img/ref/esteira-1.jpg',
   'img/ref/extensora-0.jpg',
   'img/ref/extensora-1.jpg',
-  'img/ref/hip-thrust-0.jpg',
-  'img/ref/hip-thrust-1.jpg',
   'img/ref/hiperextensao-0.jpg',
   'img/ref/hiperextensao-1.jpg',
-  'img/ref/leg-press-0.jpg',
-  'img/ref/leg-press-1.jpg',
   'img/ref/mesa-flexora-0.jpg',
   'img/ref/mesa-flexora-1.jpg',
   'img/ref/panturrilha-em-pe-0.jpg',
@@ -61,8 +57,6 @@ const ARQUIVOS = [
   'img/ref/prancha-1.jpg',
   'img/ref/prancha-lateral-0.jpg',
   'img/ref/prancha-lateral-1.jpg',
-  'img/ref/puxada-0.jpg',
-  'img/ref/puxada-1.jpg',
   'img/ref/remada-baixa-0.jpg',
   'img/ref/remada-baixa-1.jpg',
   'img/ref/remada-maquina-0.jpg',

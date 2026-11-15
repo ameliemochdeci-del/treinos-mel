@@ -1,1 +1,676 @@
-{"manterVideos":true,"config":{"nome":"Mel","meta":4},"removerFichas":["ficha-a","ficha-b","ficha-c","ficha-d"],"exercicios":[{"id":"ponte-minibanda","nome":"Ponte de glúteo com mini band","grupo":"Glúteos","dicas":["Mini band acima dos joelhos, empurrando para fora.","Suba contraindo o glúteo e segure 1 segundo.","Costelas para baixo, sem arquear a lombar."],"video":"https://www.youtube.com/watch?v=mESbN0nRneo","ref":"ponte-glute"},{"id":"hip-thrust-maquina","nome":"Elevação pélvica na máquina","grupo":"Glúteos","monitorar":"joelho","dicas":["Queixo levemente recolhido, olhar à frente.","Suba com a força do glúteo e segure 1 segundo no topo.","Costelas para baixo, sem exagerar na lombar."],"video":"https://www.youtube.com/shorts/vTwjyOvy4g4","ref":"hip-thrust"},{"id":"mesa-flexora","nome":"Mesa flexora","grupo":"Posteriores","monitorar":"joelho","dicas":["Quadril colado no banco.","Suba sem balançar e desça em 3 segundos."],"video":"https://www.youtube.com/watch?v=WgVN3viJHtc","ref":"mesa-flexora"},{"id":"terra-romeno-halteres","nome":"Levantamento terra romeno com halteres","grupo":"Posteriores","monitorar":"joelho","dicas":["Joelhos levemente flexionados e fixos: o movimento vem do quadril.","Halteres deslizam perto das pernas, coluna neutra.","Desça até sentir alongar atrás da coxa."],"cuidado":"Pare de descer quando a coluna começar a arredondar.","video":"https://www.youtube.com/watch?v=_3OOH8JzdFE","ref":"terra-romeno"},{"id":"cadeira-abdutora","nome":"Cadeira abdutora","grupo":"Glúteos","dicas":["Tronco levemente inclinado à frente trabalha mais o glúteo médio.","Abra sem pressa e controle a volta."],"video":"https://www.youtube.com/watch?v=gPDntkB838U","ref":"abdutora"},{"id":"pelvica-unilateral","nome":"Elevação pélvica unilateral","grupo":"Glúteos","monitorar":"joelho","dicas":["Costas apoiadas no banco, um pé no chão.","Suba até o quadril alinhar com o tronco.","Se o joelho incomodar, volte para a versão com as duas pernas."],"video":"https://www.youtube.com/watch?v=0r58fn7g1OY","ref":"ponte-unilateral"},{"id":"cadeira-flexora","nome":"Cadeira flexora","grupo":"Posteriores","monitorar":"joelho","dicas":["Joelho alinhado ao eixo da máquina.","Puxe sem tirar o quadril do banco e volte em 3 segundos."],"video":"https://www.youtube.com/watch?v=CHsaztLSSrc","ref":"cadeira-flexora"},{"id":"panturrilha-em-pe","nome":"Elevação de panturrilha em pé","grupo":"Panturrilha","dicas":["Suba o mais alto que conseguir, sem pulinho.","Desça devagar, alongando por completo."],"video":"https://www.youtube.com/watch?v=cklp_Xh5V8M","ref":"panturrilha-em-pe"},{"id":"prancha-lateral","nome":"Prancha lateral","grupo":"Core","dicas":["Cotovelo sob o ombro, corpo em linha reta.","Quadril alto o tempo todo.","Se for difícil, diminua o tempo."],"video":"https://www.youtube.com/watch?v=RTxAFDK1OMw","ref":"prancha-lateral"},{"id":"supino-maquina","nome":"Supino na máquina","grupo":"Peito","dicas":["Ombros para trás e para baixo, encostados no banco.","Empurre sem travar os cotovelos no final.","Volte devagar, contando 2 segundos."],"video":"https://www.youtube.com/watch?v=np22BPdFZj0","ref":"supino-maquina"},{"id":"desenvolvimento-halteres","nome":"Desenvolvimento com halteres","grupo":"Ombros","dicas":["Sentada, com o encosto firme nas costas.","Abdômen firme para não arquear a lombar.","Suba sem bater os halteres no topo."],"video":"https://www.youtube.com/shorts/nuN5RPNpIuE","ref":"desenvolvimento"},{"id":"crucifixo-maquina","nome":"Crucifixo na máquina","grupo":"Peito","dicas":["Cotovelos levemente flexionados e fixos.","Junte os braços sem encolher os ombros."],"video":"https://www.youtube.com/watch?v=zEcIgGm7fxU","ref":"peck-deck"},{"id":"elevacao-lateral","nome":"Elevação lateral","grupo":"Ombros","dicas":["Cotovelos levemente flexionados, suba até a altura dos ombros.","Sem balançar o tronco. Use carga leve."],"video":"https://www.youtube.com/watch?v=gURBTU9VSJg","ref":"elevacao-lateral"},{"id":"triceps-corda","nome":"Tríceps na polia com corda","grupo":"Tríceps","dicas":["Cotovelos colados ao tronco.","Abra a corda no final e volte devagar."],"video":"https://www.youtube.com/watch?v=M-DTY40JG9M","ref":"triceps-corda"},{"id":"prancha","nome":"Prancha","grupo":"Core","dicas":["Linha reta da cabeça aos calcanhares.","Aperte glúteos e abdômen o tempo todo."],"video":"https://www.youtube.com/watch?v=jh0z3gbljUM","ref":"prancha"},{"id":"puxada-frente","nome":"Puxada na frente","grupo":"Costas","dicas":["Peito aberto e puxe os cotovelos para baixo.","A barra desce até a altura do queixo, sem balançar o tronco."],"video":"https://www.youtube.com/shorts/gUfVYr5AaYE","ref":"puxada"},{"id":"remada-baixa","nome":"Remada baixa no cabo","grupo":"Costas","dicas":["Peito aberto e coluna neutra.","Puxe os cotovelos para trás, perto do corpo.","Não balance o tronco para ajudar."],"video":"https://www.youtube.com/watch?v=5zvxMuf378g","ref":"remada-baixa"},{"id":"remada-maquina","nome":"Remada na máquina com apoio no peito","grupo":"Costas","dicas":["Peito encostado no apoio.","Puxe os cotovelos para trás e aproxime as escápulas."],"video":"https://www.youtube.com/shorts/hpTLYFNVr_s","ref":"remada-maquina"},{"id":"crucifixo-inverso","nome":"Crucifixo inverso na máquina","grupo":"Ombros","dicas":["Peito no apoio e cotovelos levemente flexionados.","Abra os braços sem encolher os ombros."],"video":"https://www.youtube.com/shorts/KmCsToDmrK4","ref":"crucifixo-inverso"},{"id":"rosca-martelo","nome":"Rosca martelo com halteres","grupo":"Bíceps","dicas":["Cotovelos colados ao corpo.","Sem balançar o tronco."],"video":"https://www.youtube.com/watch?v=ZiasEcCg0wg","ref":"rosca-martelo"},{"id":"dead-bug","nome":"Dead bug","grupo":"Core","dicas":["Lombar colada no chão o tempo todo.","Estenda braço e perna opostos devagar, sem arquear a lombar."],"video":"https://www.youtube.com/watch?v=FC1Vg6ySKso","ref":"dead-bug"},{"id":"leg-press","nome":"Leg press (amplitude limitada)","grupo":"Pernas","monitorar":"joelho","ref":"leg-press","video":"https://www.youtube.com/watch?v=HIN899EE788","dicas":["Pés na metade de cima da plataforma, um pouco mais afastados que o quadril. Isso passa parte do trabalho para o glúteo.","Desça devagar, contando 3 segundos, só até o joelho dobrar uns 60 a 70 graus (mais ou menos metade do caminho). Mesmo sem dor, não vá até o fundo por enquanto.","Use o pino ou limitador do aparelho para marcar onde parar. Se não souber regular, peça ajuda na academia.","Suba empurrando com o calcanhar e o meio do pé, sem travar o joelho no topo. Quadril e lombar colados no encosto.","Comece no que você já faz sem dor (hoje uns 12 kg). Só suba 1 a 2 kg quando a semana anterior tiver sido tranquila."],"cuidado":"Regra do joelho: dor até 3 de 10 durante e joelho igual ou melhor na manhã seguinte. Se amanhecer pior, repita ou diminua a carga no próximo treino. Dor forte: pare o exercício."},{"id":"cadeira-extensora","nome":"Cadeira extensora (lenta e leve)","grupo":"Quadríceps","monitorar":"joelho","ref":"extensora","video":"https://www.youtube.com/watch?v=WKqCZh9hdCc","dicas":["Regule o encosto para o joelho ficar alinhado com o eixo da máquina e o rolete logo acima do tornozelo.","Suba contando 3 segundos e desça contando 3. Sem balanço e sem tranco.","Comece com a carga mínima que você já faz sem dor (hoje uns 5 kg). Prefira repetições lentas a carga alta.","Não precisa travar o joelho lá em cima."],"cuidado":"Regra do joelho: dor até 3 de 10 durante e joelho igual ou melhor na manhã seguinte. Se amanhecer pior, repita ou diminua a carga no próximo treino. Dor forte: pare o exercício. A extensora é o exercício que mais pede do tendão: aumente a carga de pouquinho em pouquinho."},{"id":"hiperextensao-45","nome":"Hiperextensão 45° (foco glúteo)","grupo":"Glúteos","ref":"hiperextensao","video":"https://www.youtube.com/watch?v=V0Rsq4AzxNk","dicas":["Almofada na altura do quadril, não na barriga. Pés firmes na plataforma.","Costas levemente arredondadas e queixo perto do peito. Suba apertando o glúteo até o corpo ficar em linha reta.","Não passe da linha reta: arquear a lombar tira o trabalho do glúteo.","Segure 1 segundo no topo. Quando ficar fácil, segure uma anilha ou halter no peito."],"cuidado":"Se sentir a lombar trabalhando mais que o glúteo, diminua a amplitude e suba mais devagar."},{"id":"coice-cabo","nome":"Coice no cabo (glúteo)","grupo":"Glúteos","ref":"coice-cabo","video":"https://www.youtube.com/watch?v=KoGf9T179Vg","dicas":["Polia baixa, tornozeleira na perna que trabalha. Segure no apoio e incline um pouco o tronco à frente.","Leve a perna para trás e um pouco para cima apertando o glúteo. Pare quando a lombar começar a arquear.","Volte devagar, sem encostar o peso na pilha.","Quadril travado, sem girar. Joelho de apoio levemente dobrado."],"cuidado":""},{"id":"cardio-bike","nome":"Bicicleta (cardio leve)","grupo":"Cardio","monitorar":"joelho","ref":"bike","dicas":["Selim alto: no ponto mais baixo o joelho fica quase esticado. Isso reduz a flexão do joelho.","Ritmo em que dá para conversar (uns 5 a 6 de 10), resistência leve."],"cuidado":"Se o joelho passar de 3 de 10, troque por elíptico."},{"id":"cardio-eliptico","nome":"Elíptico (cardio leve)","grupo":"Cardio","monitorar":"joelho","ref":"eliptico","dicas":["Sem impacto. Postura alta, olhar à frente, sem se apoiar nas alças com o peso do corpo.","Ritmo em que dá para conversar (uns 5 a 6 de 10)."],"cuidado":"Se o joelho passar de 3 de 10, diminua o ritmo ou troque por bicicleta."},{"id":"cardio-esteira","nome":"Caminhada na esteira (cardio leve)","grupo":"Cardio","monitorar":"joelho","ref":"esteira","dicas":["Passo firme, sem correr. Comece sem inclinação ou com até 3%.","Ritmo em que dá para conversar (uns 5 a 6 de 10)."],"cuidado":"Subida forte pede mais do joelho. Se passar de 3 de 10, volte para o plano ou troque por bicicleta."},{"id":"cardio-livre","nome":"Cardio livre (natação, bicicleta ou elíptico)","grupo":"Cardio","monitorar":"joelho","dicas":["Escolha um só e mantenha ritmo em que dá para conversar.","Na natação, prefira crawl ou costas. A pernada do nado peito costuma irritar o joelho."],"cuidado":"Corrida e pulos ainda não entram. Só voltam quando o joelho aguentar semanas seguidas sem dor."},{"id":"mobilidade-tornozelo","nome":"Mobilidade de tornozelo na parede","grupo":"Mobilidade","monitorar":"joelho","dicas":["Pé apoiado, a 10 a 12 cm da parede.","Leve o joelho em direção à parede sem tirar o calcanhar do chão.","Movimento lento, sem balançar."],"cuidado":"Vá só até onde o joelho não incomode.","video":"https://www.youtube.com/shorts/tFSDApYnCNc"},{"id":"isometria-quadriceps","nome":"Isometria de quadríceps na parede","grupo":"Quadríceps","monitorar":"joelho","dicas":["Costas na parede, joelhos a cerca de 60° (não desça mais que isso).","Segure parado, em esforço moderado, cerca de 6 de 10.","Se não aguentar 30 segundos, suba um pouco na parede."],"cuidado":"A dor pode aparecer, mas deve ficar em até 3 de 10 e voltar ao normal em até 24 horas. Se passou disso, diminua o esforço no próximo treino.","video":"https://www.youtube.com/watch?v=izG8U8HQ9zI"},{"id":"abducao-cabo","nome":"Abdução de quadril no cabo","grupo":"Glúteos","dicas":["Caneleira no tornozelo e uma mão apoiada para equilíbrio.","Leve a perna para o lado sem inclinar o tronco.","Volte controlando, sem deixar o peso bater."],"video":"https://www.youtube.com/shorts/CoLnjRKWYOU"}],"fichas":[{"id":"v3-a","nome":"Inferior A","foco":"glúteos, leg press leve e cardio","itens":[{"ex":"mobilidade-tornozelo","series":2,"reps":"10","descanso":20,"obs":"Aquecimento. Joelho vai em direção ao dedo do pé, calcanhar no chão."},{"ex":"isometria-quadriceps","series":3,"reps":"30 s","descanso":60,"obs":"Joelhos a uns 60°, esforço moderado."},{"ex":"ponte-minibanda","series":2,"reps":"15","descanso":30,"obs":"Ativação: sinta o glúteo antes de pegar carga."},{"ex":"hip-thrust-maquina","series":4,"reps":"8-10","descanso":90,"obs":"Exercício principal do dia. Suba a carga quando fechar as 4 séries com boa técnica."},{"ex":"leg-press","series":3,"reps":"12-15","descanso":75,"obs":"Só até uns 60 a 70° de joelho. Comece no que você já faz sem dor."},{"ex":"terra-romeno-halteres","series":3,"reps":"10","descanso":90,"obs":"Quadril para trás, coluna neutra, joelho quase esticado e solto."},{"ex":"cadeira-abdutora","series":3,"reps":"15","descanso":45,"obs":"Tronco levemente inclinado à frente."},{"ex":"cardio-bike","series":1,"reps":"15 min","descanso":60,"obs":"Bicicleta com selim alto. Semanas 1 e 2: 15 min. Depois suba 5 min a cada 2 semanas, até 25 ou 30."}]},{"id":"v3-b","nome":"Superior A","foco":"peito, costas, ombros e cardio","itens":[{"ex":"supino-maquina","series":3,"reps":"10-12","descanso":75},{"ex":"puxada-frente","series":3,"reps":"10-12","descanso":75},{"ex":"desenvolvimento-halteres","series":3,"reps":"10","descanso":75},{"ex":"remada-baixa","series":3,"reps":"10-12","descanso":75},{"ex":"elevacao-lateral","series":3,"reps":"12-15","descanso":45},{"ex":"triceps-corda","series":3,"reps":"12","descanso":45},{"ex":"prancha","series":3,"reps":"30 s","descanso":45},{"ex":"cardio-eliptico","series":1,"reps":"15 min","descanso":60,"obs":"Elíptico em ritmo leve. Semanas 1 e 2: 15 min. Depois suba 5 min a cada 2 semanas, até 25 ou 30."}]},{"id":"v3-c","nome":"Inferior B","foco":"posteriores, glúteos, extensora leve e cardio","itens":[{"ex":"mobilidade-tornozelo","series":2,"reps":"10","descanso":20,"obs":"Aquecimento."},{"ex":"isometria-quadriceps","series":3,"reps":"30 s","descanso":60,"obs":"Joelhos a uns 60°, esforço moderado."},{"ex":"mesa-flexora","series":3,"reps":"10-12","descanso":75,"obs":"Descida lenta, contando 3 segundos."},{"ex":"pelvica-unilateral","series":3,"reps":"10","descanso":75,"obs":"Quadril nivelado, sem girar."},{"ex":"hiperextensao-45","series":3,"reps":"12","descanso":60,"obs":"Foco no glúteo, sem arquear a lombar."},{"ex":"cadeira-extensora","series":3,"reps":"15","descanso":60,"obs":"Lenta (3 s subindo, 3 s descendo) e bem leve. Comece com uns 5 kg."},{"ex":"panturrilha-em-pe","series":3,"reps":"12-15","descanso":45},{"ex":"cardio-bike","series":1,"reps":"15 min","descanso":60,"obs":"Bicicleta com selim alto. Semanas 1 e 2: 15 min. Depois suba 5 min a cada 2 semanas, até 25 ou 30."}]},{"id":"v3-d","nome":"Superior B + glúteo","foco":"costas, peito, braços, glúteos e cardio","itens":[{"ex":"ponte-minibanda","series":2,"reps":"15","descanso":30,"obs":"Ativação."},{"ex":"coice-cabo","series":3,"reps":"12","descanso":45,"obs":"Todas as séries de uma perna e depois da outra."},{"ex":"abducao-cabo","series":3,"reps":"12","descanso":45,"obs":"Quadril travado, sem girar o tronco."},{"ex":"remada-maquina","series":3,"reps":"10-12","descanso":75},{"ex":"crucifixo-maquina","series":3,"reps":"12","descanso":60},{"ex":"crucifixo-inverso","series":3,"reps":"12-15","descanso":45},{"ex":"rosca-martelo","series":3,"reps":"12","descanso":45},{"ex":"dead-bug","series":3,"reps":"10","descanso":45,"obs":"Lombar colada no chão."},{"ex":"cardio-esteira","series":1,"reps":"15 min","descanso":60,"obs":"Caminhada na esteira, sem inclinação forte. Semanas 1 e 2: 15 min. Depois suba 5 min a cada 2 semanas, até 25 ou 30."}]},{"id":"v3-e","nome":"Cardio livre (opcional)","foco":"para os dias em que sobrar tempo","itens":[{"ex":"cardio-livre","series":1,"reps":"30 min","descanso":60,"obs":"Natação, bicicleta ou elíptico. Ritmo em que dá para conversar."}]}],"agenda":{"seg":"v3-a","ter":"v3-b","qui":"v3-c","sex":"v3-d"}}
+{
+ "manterVideos": true,
+ "config": {
+  "nome": "Mel",
+  "meta": 4
+ },
+ "removerFichas": [
+  "ficha-a",
+  "ficha-b",
+  "ficha-c",
+  "ficha-d"
+ ],
+ "exercicios": [
+  {
+   "id": "ponte-minibanda",
+   "nome": "Ponte de glúteo com mini band",
+   "grupo": "Glúteos",
+   "dicas": [
+    "Mini band acima dos joelhos, empurrando para fora.",
+    "Suba contraindo o glúteo e segure 1 segundo.",
+    "Costelas para baixo, sem arquear a lombar."
+   ],
+   "video": "https://www.youtube.com/watch?v=mESbN0nRneo",
+   "ref": "ponte-glute"
+  },
+  {
+   "id": "hip-thrust-maquina",
+   "nome": "Elevação pélvica na máquina",
+   "grupo": "Glúteos",
+   "monitorar": "joelho",
+   "dicas": [
+    "Pés apoiados por inteiro no chão ou na plataforma, na largura entre quadril e ombros. Empurre pelo calcanhar e pelo meio do pé, não fique na ponta do pé.",
+    "No topo, as canelas ficam quase na vertical e os joelhos sobre os tornozelos. Se os joelhos passarem muito dos pés, aproxime ou afaste os pés.",
+    "Costas coladas no encosto o tempo todo. Suba com a força do glúteo e segure 1 segundo.",
+    "Queixo levemente recolhido, costelas para baixo, sem arquear a lombar no topo.",
+    "Comece leve até acertar o movimento. Veja se o apoio está na altura certa para não deslizar."
+   ],
+   "video": "https://www.youtube.com/shorts/vTwjyOvy4g4"
+  },
+  {
+   "id": "mesa-flexora",
+   "nome": "Mesa flexora",
+   "grupo": "Posteriores",
+   "monitorar": "joelho",
+   "dicas": [
+    "Quadril colado no banco e rolete logo acima do calcanhar.",
+    "Suba sem balançar e sem levantar o quadril. Desça em 3 segundos."
+   ],
+   "video": "https://www.youtube.com/watch?v=WgVN3viJHtc",
+   "ref": "mesa-flexora"
+  },
+  {
+   "id": "terra-romeno-halteres",
+   "nome": "Levantamento terra romeno com halteres",
+   "grupo": "Posteriores",
+   "monitorar": "joelho",
+   "dicas": [
+    "Joelhos levemente dobrados e fixos: o movimento vem do quadril, empurrando-o para trás.",
+    "Halteres deslizam perto das pernas. Coluna reta, olhar para o chão um pouco à frente, sem levantar a cabeça.",
+    "Desça só até sentir alongar atrás da coxa (em geral abaixo do joelho ou perto da canela). Suba apertando o glúteo.",
+    "Na imagem de referência a pessoa usa barra; com halteres o movimento é o mesmo."
+   ],
+   "cuidado": "Pare de descer quando a coluna começar a arredondar.",
+   "video": "https://www.youtube.com/watch?v=_3OOH8JzdFE",
+   "ref": "terra-romeno"
+  },
+  {
+   "id": "cadeira-abdutora",
+   "nome": "Cadeira abdutora",
+   "grupo": "Glúteos",
+   "dicas": [
+    "Tronco levemente inclinado à frente trabalha mais o glúteo médio.",
+    "Abra sem pressa e controle a volta."
+   ],
+   "video": "https://www.youtube.com/watch?v=gPDntkB838U",
+   "ref": "abdutora"
+  },
+  {
+   "id": "pelvica-unilateral",
+   "nome": "Elevação pélvica unilateral",
+   "grupo": "Glúteos",
+   "monitorar": "joelho",
+   "dicas": [
+    "Costas apoiadas no banco, um pé no chão.",
+    "Suba até o quadril alinhar com o tronco.",
+    "Se o joelho incomodar, volte para a versão com as duas pernas."
+   ],
+   "video": "https://www.youtube.com/watch?v=0r58fn7g1OY",
+   "ref": "ponte-unilateral"
+  },
+  {
+   "id": "cadeira-flexora",
+   "nome": "Cadeira flexora",
+   "grupo": "Posteriores",
+   "monitorar": "joelho",
+   "dicas": [
+    "Joelho alinhado ao eixo da máquina.",
+    "Puxe sem tirar o quadril do banco e volte em 3 segundos."
+   ],
+   "video": "https://www.youtube.com/watch?v=CHsaztLSSrc",
+   "ref": "cadeira-flexora"
+  },
+  {
+   "id": "panturrilha-em-pe",
+   "nome": "Elevação de panturrilha em pé",
+   "grupo": "Panturrilha",
+   "dicas": [
+    "Suba o mais alto que conseguir, sem pulinho.",
+    "Desça devagar, alongando por completo."
+   ],
+   "video": "https://www.youtube.com/watch?v=cklp_Xh5V8M",
+   "ref": "panturrilha-em-pe"
+  },
+  {
+   "id": "prancha-lateral",
+   "nome": "Prancha lateral",
+   "grupo": "Core",
+   "dicas": [
+    "Cotovelo sob o ombro, corpo em linha reta.",
+    "Quadril alto o tempo todo.",
+    "Se for difícil, diminua o tempo."
+   ],
+   "video": "https://www.youtube.com/watch?v=RTxAFDK1OMw",
+   "ref": "prancha-lateral"
+  },
+  {
+   "id": "supino-maquina",
+   "nome": "Supino na máquina",
+   "grupo": "Peito",
+   "dicas": [
+    "Ombros para trás e para baixo, encostados no banco.",
+    "Empurre sem travar os cotovelos no final.",
+    "Volte devagar, contando 2 segundos."
+   ],
+   "video": "https://www.youtube.com/watch?v=np22BPdFZj0",
+   "ref": "supino-maquina"
+  },
+  {
+   "id": "desenvolvimento-halteres",
+   "nome": "Desenvolvimento com halteres",
+   "grupo": "Ombros",
+   "dicas": [
+    "Sentada, com o encosto firme nas costas.",
+    "Abdômen firme para não arquear a lombar.",
+    "Suba sem bater os halteres no topo."
+   ],
+   "video": "https://www.youtube.com/shorts/nuN5RPNpIuE",
+   "ref": "desenvolvimento"
+  },
+  {
+   "id": "crucifixo-maquina",
+   "nome": "Crucifixo na máquina",
+   "grupo": "Peito",
+   "dicas": [
+    "Cotovelos levemente flexionados e fixos.",
+    "Junte os braços sem encolher os ombros."
+   ],
+   "video": "https://www.youtube.com/watch?v=zEcIgGm7fxU",
+   "ref": "peck-deck"
+  },
+  {
+   "id": "elevacao-lateral",
+   "nome": "Elevação lateral",
+   "grupo": "Ombros",
+   "dicas": [
+    "Cotovelos levemente flexionados. Suba só até a altura dos ombros, não acima.",
+    "Sem balançar o tronco. Use carga leve."
+   ],
+   "video": "https://www.youtube.com/watch?v=gURBTU9VSJg",
+   "ref": "elevacao-lateral"
+  },
+  {
+   "id": "triceps-corda",
+   "nome": "Tríceps na polia com corda",
+   "grupo": "Tríceps",
+   "dicas": [
+    "Cotovelos colados ao tronco.",
+    "Abra a corda no final e volte devagar."
+   ],
+   "video": "https://www.youtube.com/watch?v=M-DTY40JG9M",
+   "ref": "triceps-corda"
+  },
+  {
+   "id": "prancha",
+   "nome": "Prancha",
+   "grupo": "Core",
+   "dicas": [
+    "Linha reta da cabeça aos calcanhares.",
+    "Aperte glúteos e abdômen o tempo todo."
+   ],
+   "video": "https://www.youtube.com/watch?v=jh0z3gbljUM",
+   "ref": "prancha"
+  },
+  {
+   "id": "puxada-frente",
+   "nome": "Puxada na frente",
+   "grupo": "Costas",
+   "dicas": [
+    "Sempre puxe a barra na frente do corpo, até a altura do queixo ou da clavícula. Nunca puxe atrás da nuca.",
+    "Peito aberto, ombros para baixo e para trás, cotovelos descendo em direção ao quadril.",
+    "Tronco quase reto, com no máximo uma leve inclinação para trás. Sem balançar para ganhar impulso.",
+    "Volte devagar, deixando o braço esticar sem soltar o ombro para cima."
+   ],
+   "video": "https://www.youtube.com/shorts/gUfVYr5AaYE",
+   "cuidado": "Se sentir pinçar no ombro, use pegada um pouco mais fechada ou diminua a carga."
+  },
+  {
+   "id": "remada-baixa",
+   "nome": "Remada baixa no cabo",
+   "grupo": "Costas",
+   "dicas": [
+    "Peito aberto e coluna neutra, com inclinação mínima do tronco para trás.",
+    "Puxe os cotovelos para trás, perto do corpo, juntando as escápulas.",
+    "Joelhos levemente dobrados. Não balance o tronco para ajudar."
+   ],
+   "video": "https://www.youtube.com/watch?v=5zvxMuf378g",
+   "ref": "remada-baixa"
+  },
+  {
+   "id": "remada-maquina",
+   "nome": "Remada na máquina com apoio no peito",
+   "grupo": "Costas",
+   "dicas": [
+    "Peito encostado no apoio.",
+    "Puxe os cotovelos para trás e aproxime as escápulas."
+   ],
+   "video": "https://www.youtube.com/shorts/hpTLYFNVr_s",
+   "ref": "remada-maquina"
+  },
+  {
+   "id": "crucifixo-inverso",
+   "nome": "Crucifixo inverso na máquina",
+   "grupo": "Ombros",
+   "dicas": [
+    "Peito no apoio e cotovelos levemente flexionados.",
+    "Abra os braços sem encolher os ombros."
+   ],
+   "video": "https://www.youtube.com/shorts/KmCsToDmrK4",
+   "ref": "crucifixo-inverso"
+  },
+  {
+   "id": "rosca-martelo",
+   "nome": "Rosca martelo com halteres",
+   "grupo": "Bíceps",
+   "dicas": [
+    "Cotovelos colados ao corpo.",
+    "Sem balançar o tronco."
+   ],
+   "video": "https://www.youtube.com/watch?v=ZiasEcCg0wg",
+   "ref": "rosca-martelo"
+  },
+  {
+   "id": "dead-bug",
+   "nome": "Dead bug",
+   "grupo": "Core",
+   "dicas": [
+    "Lombar colada no chão o tempo todo.",
+    "Estenda braço e perna opostos devagar, sem arquear a lombar."
+   ],
+   "video": "https://www.youtube.com/watch?v=FC1Vg6ySKso",
+   "ref": "dead-bug"
+  },
+  {
+   "id": "leg-press",
+   "nome": "Leg press (amplitude limitada)",
+   "grupo": "Pernas",
+   "monitorar": "joelho",
+   "video": "https://www.youtube.com/watch?v=HIN899EE788",
+   "dicas": [
+    "Pés na metade de cima da plataforma, um pouco mais afastados que o quadril. Isso passa parte do trabalho para o glúteo.",
+    "Desça devagar, contando 3 segundos, só até o joelho dobrar uns 60 a 70 graus (mais ou menos metade do caminho). Mesmo sem dor, não vá até o fundo por enquanto.",
+    "Use o pino ou limitador do aparelho para marcar onde parar. Se não souber regular, peça ajuda na academia.",
+    "Suba empurrando com o calcanhar e o meio do pé, sem travar o joelho no topo. Quadril e lombar colados no encosto.",
+    "Comece no que você já faz sem dor (hoje uns 12 kg). Só suba 1 a 2 kg quando a semana anterior tiver sido tranquila."
+   ],
+   "cuidado": "Regra do joelho: dor até 3 de 10 durante e joelho igual ou melhor na manhã seguinte. Se amanhecer pior, repita ou diminua a carga no próximo treino. Dor forte: pare o exercício. Atenção: o vídeo mostra descer até o bumbum sair do banco e uma amplitude grande. No seu caso, NÃO faça isso: pare em 60 a 70° e use o limitador do aparelho. Siga as dicas escritas aqui."
+  },
+  {
+   "id": "cadeira-extensora",
+   "nome": "Cadeira extensora (lenta e leve)",
+   "grupo": "Quadríceps",
+   "monitorar": "joelho",
+   "ref": "extensora",
+   "video": "https://www.youtube.com/watch?v=WKqCZh9hdCc",
+   "dicas": [
+    "Regule o encosto para o joelho ficar alinhado com o eixo da máquina e o rolete logo acima do tornozelo.",
+    "Suba contando 3 segundos e desça contando 3. Sem balanço e sem tranco.",
+    "Comece com a carga mínima que você já faz sem dor (hoje uns 5 kg). Prefira repetições lentas a carga alta.",
+    "Não precisa travar o joelho lá em cima.",
+    "A imagem de referência mostra a perna totalmente esticada. Para você, pare um pouco antes de travar o joelho."
+   ],
+   "cuidado": "Regra do joelho: dor até 3 de 10 durante e joelho igual ou melhor na manhã seguinte. Se amanhecer pior, repita ou diminua a carga no próximo treino. Dor forte: pare o exercício. A extensora é o exercício que mais pede do tendão: aumente a carga de pouquinho em pouquinho."
+  },
+  {
+   "id": "hiperextensao-45",
+   "nome": "Hiperextensão 45° (foco glúteo)",
+   "grupo": "Glúteos",
+   "ref": "hiperextensao",
+   "video": "https://www.youtube.com/watch?v=V0Rsq4AzxNk",
+   "dicas": [
+    "Almofada na altura do quadril, não na barriga. Pés firmes na plataforma.",
+    "Costas levemente arredondadas e queixo perto do peito. Suba apertando o glúteo até o corpo ficar em linha reta.",
+    "Não passe da linha reta: arquear a lombar tira o trabalho do glúteo.",
+    "Segure 1 segundo no topo. Quando ficar fácil, segure uma anilha ou halter no peito."
+   ],
+   "cuidado": "Suba só até o corpo ficar em linha reta. Passar disso é arquear a lombar. Se a lombar incomodar, diminua a amplitude."
+  },
+  {
+   "id": "coice-cabo",
+   "nome": "Coice no cabo (glúteo)",
+   "grupo": "Glúteos",
+   "ref": "coice-cabo",
+   "video": "https://www.youtube.com/watch?v=KoGf9T179Vg",
+   "dicas": [
+    "Polia baixa, tornozeleira na perna que trabalha. Segure no apoio, incline um pouco o tronco e deixe a perna de apoio levemente dobrada.",
+    "Leve a perna para trás e um pouco para cima apertando o glúteo. Pare quando a lombar começar a arquear.",
+    "Costelas para baixo, quadril quadrado, sem girar. O movimento é pequeno e curto.",
+    "Volte devagar, sem encostar o peso na pilha."
+   ],
+   "cuidado": ""
+  },
+  {
+   "id": "cardio-bike",
+   "nome": "Bicicleta (cardio leve)",
+   "grupo": "Cardio",
+   "monitorar": "joelho",
+   "ref": "bike",
+   "dicas": [
+    "Selim alto: no ponto mais baixo o joelho fica quase esticado. Isso reduz a flexão do joelho.",
+    "Ritmo em que dá para conversar (uns 5 a 6 de 10), resistência leve."
+   ],
+   "cuidado": "Se o joelho passar de 3 de 10, troque por elíptico."
+  },
+  {
+   "id": "cardio-eliptico",
+   "nome": "Elíptico (cardio leve)",
+   "grupo": "Cardio",
+   "monitorar": "joelho",
+   "ref": "eliptico",
+   "dicas": [
+    "Sem impacto. Postura alta, olhar à frente, sem se apoiar nas alças com o peso do corpo.",
+    "Ritmo em que dá para conversar (uns 5 a 6 de 10)."
+   ],
+   "cuidado": "Se o joelho passar de 3 de 10, diminua o ritmo ou troque por bicicleta."
+  },
+  {
+   "id": "cardio-esteira",
+   "nome": "Caminhada na esteira (cardio leve)",
+   "grupo": "Cardio",
+   "monitorar": "joelho",
+   "ref": "esteira",
+   "dicas": [
+    "Passo firme, sem correr. Comece sem inclinação ou com até 3%.",
+    "Ritmo em que dá para conversar (uns 5 a 6 de 10)."
+   ],
+   "cuidado": "Subida forte pede mais do joelho. Se passar de 3 de 10, volte para o plano ou troque por bicicleta."
+  },
+  {
+   "id": "cardio-livre",
+   "nome": "Cardio livre (natação, bicicleta ou elíptico)",
+   "grupo": "Cardio",
+   "monitorar": "joelho",
+   "dicas": [
+    "Escolha um só e mantenha ritmo em que dá para conversar.",
+    "Na natação, prefira crawl ou costas. A pernada do nado peito costuma irritar o joelho."
+   ],
+   "cuidado": "Corrida e pulos ainda não entram. Só voltam quando o joelho aguentar semanas seguidas sem dor."
+  },
+  {
+   "id": "mobilidade-tornozelo",
+   "nome": "Mobilidade de tornozelo na parede",
+   "grupo": "Mobilidade",
+   "monitorar": "joelho",
+   "dicas": [
+    "Pé apoiado, a 10 a 12 cm da parede.",
+    "Leve o joelho em direção à parede sem tirar o calcanhar do chão.",
+    "Movimento lento, sem balançar."
+   ],
+   "cuidado": "Vá só até onde o joelho não incomode.",
+   "video": "https://www.youtube.com/shorts/tFSDApYnCNc"
+  },
+  {
+   "id": "isometria-quadriceps",
+   "nome": "Isometria de quadríceps na parede",
+   "grupo": "Quadríceps",
+   "monitorar": "joelho",
+   "dicas": [
+    "Costas na parede, joelhos a cerca de 60° (não desça mais que isso).",
+    "Segure parado, em esforço moderado, cerca de 6 de 10.",
+    "Se não aguentar 30 segundos, suba um pouco na parede."
+   ],
+   "cuidado": "A dor pode aparecer, mas deve ficar em até 3 de 10 e voltar ao normal em até 24 horas. Se passou disso, diminua o esforço no próximo treino.",
+   "video": "https://www.youtube.com/watch?v=izG8U8HQ9zI"
+  },
+  {
+   "id": "abducao-cabo",
+   "nome": "Abdução de quadril no cabo",
+   "grupo": "Glúteos",
+   "dicas": [
+    "Caneleira no tornozelo e uma mão apoiada para equilíbrio.",
+    "Leve a perna para o lado sem inclinar o tronco.",
+    "Volte controlando, sem deixar o peso bater."
+   ],
+   "video": "https://www.youtube.com/shorts/CoLnjRKWYOU"
+  }
+ ],
+ "fichas": [
+  {
+   "id": "v3-a",
+   "nome": "Inferior A",
+   "foco": "glúteos, leg press leve e cardio",
+   "itens": [
+    {
+     "ex": "mobilidade-tornozelo",
+     "series": 2,
+     "reps": "10",
+     "descanso": 20,
+     "obs": "Aquecimento. Joelho vai em direção ao dedo do pé, calcanhar no chão."
+    },
+    {
+     "ex": "isometria-quadriceps",
+     "series": 3,
+     "reps": "30 s",
+     "descanso": 60,
+     "obs": "Joelhos a uns 60°, esforço moderado."
+    },
+    {
+     "ex": "ponte-minibanda",
+     "series": 2,
+     "reps": "15",
+     "descanso": 30,
+     "obs": "Ativação: sinta o glúteo antes de pegar carga."
+    },
+    {
+     "ex": "hip-thrust-maquina",
+     "series": 4,
+     "reps": "8-10",
+     "descanso": 90,
+     "obs": "Exercício principal do dia. Suba a carga quando fechar as 4 séries com boa técnica."
+    },
+    {
+     "ex": "leg-press",
+     "series": 3,
+     "reps": "12-15",
+     "descanso": 75,
+     "obs": "Só até uns 60 a 70° de joelho. Comece no que você já faz sem dor."
+    },
+    {
+     "ex": "terra-romeno-halteres",
+     "series": 3,
+     "reps": "10",
+     "descanso": 90,
+     "obs": "Quadril para trás, coluna neutra, joelho quase esticado e solto."
+    },
+    {
+     "ex": "cadeira-abdutora",
+     "series": 3,
+     "reps": "15",
+     "descanso": 45,
+     "obs": "Tronco levemente inclinado à frente."
+    },
+    {
+     "ex": "cardio-bike",
+     "series": 1,
+     "reps": "15 min",
+     "descanso": 60,
+     "obs": "Bicicleta com selim alto. Semanas 1 e 2: 15 min. Depois suba 5 min a cada 2 semanas, até 25 ou 30."
+    }
+   ]
+  },
+  {
+   "id": "v3-b",
+   "nome": "Superior A",
+   "foco": "peito, costas, ombros e cardio",
+   "itens": [
+    {
+     "ex": "supino-maquina",
+     "series": 3,
+     "reps": "10-12",
+     "descanso": 75
+    },
+    {
+     "ex": "puxada-frente",
+     "series": 3,
+     "reps": "10-12",
+     "descanso": 75
+    },
+    {
+     "ex": "desenvolvimento-halteres",
+     "series": 3,
+     "reps": "10",
+     "descanso": 75
+    },
+    {
+     "ex": "remada-baixa",
+     "series": 3,
+     "reps": "10-12",
+     "descanso": 75
+    },
+    {
+     "ex": "elevacao-lateral",
+     "series": 3,
+     "reps": "12-15",
+     "descanso": 45
+    },
+    {
+     "ex": "triceps-corda",
+     "series": 3,
+     "reps": "12",
+     "descanso": 45
+    },
+    {
+     "ex": "prancha",
+     "series": 3,
+     "reps": "30 s",
+     "descanso": 45
+    },
+    {
+     "ex": "cardio-eliptico",
+     "series": 1,
+     "reps": "15 min",
+     "descanso": 60,
+     "obs": "Elíptico em ritmo leve. Semanas 1 e 2: 15 min. Depois suba 5 min a cada 2 semanas, até 25 ou 30."
+    }
+   ]
+  },
+  {
+   "id": "v3-c",
+   "nome": "Inferior B",
+   "foco": "posteriores, glúteos, extensora leve e cardio",
+   "itens": [
+    {
+     "ex": "mobilidade-tornozelo",
+     "series": 2,
+     "reps": "10",
+     "descanso": 20,
+     "obs": "Aquecimento."
+    },
+    {
+     "ex": "isometria-quadriceps",
+     "series": 3,
+     "reps": "30 s",
+     "descanso": 60,
+     "obs": "Joelhos a uns 60°, esforço moderado."
+    },
+    {
+     "ex": "mesa-flexora",
+     "series": 3,
+     "reps": "10-12",
+     "descanso": 75,
+     "obs": "Descida lenta, contando 3 segundos."
+    },
+    {
+     "ex": "pelvica-unilateral",
+     "series": 3,
+     "reps": "10",
+     "descanso": 75,
+     "obs": "Quadril nivelado, sem girar."
+    },
+    {
+     "ex": "hiperextensao-45",
+     "series": 3,
+     "reps": "12",
+     "descanso": 60,
+     "obs": "Foco no glúteo, sem arquear a lombar."
+    },
+    {
+     "ex": "cadeira-extensora",
+     "series": 3,
+     "reps": "15",
+     "descanso": 60,
+     "obs": "Lenta (3 s subindo, 3 s descendo) e bem leve. Comece com uns 5 kg."
+    },
+    {
+     "ex": "panturrilha-em-pe",
+     "series": 3,
+     "reps": "12-15",
+     "descanso": 45
+    },
+    {
+     "ex": "cardio-bike",
+     "series": 1,
+     "reps": "15 min",
+     "descanso": 60,
+     "obs": "Bicicleta com selim alto. Semanas 1 e 2: 15 min. Depois suba 5 min a cada 2 semanas, até 25 ou 30."
+    }
+   ]
+  },
+  {
+   "id": "v3-d",
+   "nome": "Superior B + glúteo",
+   "foco": "costas, peito, braços, glúteos e cardio",
+   "itens": [
+    {
+     "ex": "ponte-minibanda",
+     "series": 2,
+     "reps": "15",
+     "descanso": 30,
+     "obs": "Ativação."
+    },
+    {
+     "ex": "coice-cabo",
+     "series": 3,
+     "reps": "12",
+     "descanso": 45,
+     "obs": "Todas as séries de uma perna e depois da outra."
+    },
+    {
+     "ex": "abducao-cabo",
+     "series": 3,
+     "reps": "12",
+     "descanso": 45,
+     "obs": "Quadril travado, sem girar o tronco."
+    },
+    {
+     "ex": "remada-maquina",
+     "series": 3,
+     "reps": "10-12",
+     "descanso": 75
+    },
+    {
+     "ex": "crucifixo-maquina",
+     "series": 3,
+     "reps": "12",
+     "descanso": 60
+    },
+    {
+     "ex": "crucifixo-inverso",
+     "series": 3,
+     "reps": "12-15",
+     "descanso": 45
+    },
+    {
+     "ex": "rosca-martelo",
+     "series": 3,
+     "reps": "12",
+     "descanso": 45
+    },
+    {
+     "ex": "dead-bug",
+     "series": 3,
+     "reps": "10",
+     "descanso": 45,
+     "obs": "Lombar colada no chão."
+    },
+    {
+     "ex": "cardio-esteira",
+     "series": 1,
+     "reps": "15 min",
+     "descanso": 60,
+     "obs": "Caminhada na esteira, sem inclinação forte. Semanas 1 e 2: 15 min. Depois suba 5 min a cada 2 semanas, até 25 ou 30."
+    }
+   ]
+  },
+  {
+   "id": "v3-e",
+   "nome": "Cardio livre (opcional)",
+   "foco": "para os dias em que sobrar tempo",
+   "itens": [
+    {
+     "ex": "cardio-livre",
+     "series": 1,
+     "reps": "30 min",
+     "descanso": 60,
+     "obs": "Natação, bicicleta ou elíptico. Ritmo em que dá para conversar."
+    }
+   ]
+  }
+ ],
+ "agenda": {
+  "seg": "v3-a",
+  "ter": "v3-b",
+  "qui": "v3-c",
+  "sex": "v3-d"
+ }
+}
